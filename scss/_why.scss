@@ -1,0 +1,105 @@
+.why {
+	padding: 3.17vw 0 3.17vw;
+
+	&__title {
+		max-width: 55vw;
+		margin: 0 auto 2.4vw;
+		letter-spacing: -0.04em;
+	}
+
+	&__list {
+		flex-wrap: wrap;
+		column-gap: 3.2vw;
+		row-gap: 2.1875vw;
+	}
+
+	&__item {
+		flex: 0 0 calc(50% - 1.6vw);
+		padding: 1.4vw 1.5625vw 1.98vw 2.65625vw;
+		align-items: start;
+		justify-content: space-between;
+		border-radius: 1vw;
+		background-color: #fff;
+	}
+
+	&__text {
+		flex: 0 1 23.75vw;
+	}
+
+	&__name {
+		padding-top: 0.57vw;
+		margin-bottom: 0.78125vw;
+		font-weight: 900;
+		font-size: 1.35vw;
+		line-height: 108%;
+	}
+
+	&__descr {
+		font-size: 0.9375vw;
+		line-height: 150%;
+		color: #778392;
+	}
+
+	&__icon {
+		flex: 0 0 3.125vw;
+		height: 3.125vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0.78125vw;
+		background-color: $accent-color;
+
+		svg {
+			max-width: 40%;
+		}
+
+		path {
+			fill: #fff;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.why {
+		padding: 3rem 0;
+
+		&__title {
+			max-width: none;
+			margin-bottom: 1.3rem;
+		}
+
+		&__list {
+			flex-direction: column;
+			gap: 1.7rem;
+		}
+
+		&__item {
+			flex-basis: 100%;
+			min-height: 13.5rem;
+			padding: 1.6rem 1.5rem 2.1rem 2.4rem;
+			border-radius: 1.5rem;
+		}
+
+		&__text {
+			flex-basis: 16.3rem;
+		}
+
+		&__name {
+			padding-top: 0.4rem;
+			margin-bottom: 0.7rem;
+			font-size: 1.3rem;
+			line-height: 131%;
+		}
+
+		&__descr {
+			font-size: 0.9rem;
+			line-height: 144%;
+		}
+
+		&__icon {
+			flex-basis: 3rem;
+			height: 3rem;
+			border-radius: 0.7rem;
+		}
+	}
+}
