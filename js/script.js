@@ -329,25 +329,56 @@ $(window).on('scroll', function () {
 	});
 });
 
-let offerSwiper = new Swiper('.offer__swiper', {
+const offerSwiper = new Swiper('.offer__swiper', {
 	loop: false,
 	speed: 600,
 	centeredSlides: false,
-	slidesPerView: 'auto',
 	touchRatio: 1,
+	slidesPerView: 'auto',
 	simulateTouch: true,
 	mousewheel: true,
 	keyboard: true,
-	// cssMode: true,
+
+	navigation: {
+		nextEl: '.offer__arrow-next',
+		prevEl: '.offer__arrow-prev',
+	},
 
 	pagination: {
 		clickable: true,
 		type: 'bullets',
 		el: '.offer__pagination',
 	},
-
-	navigation: {
-		nextEl: '.offer__arrow-next',
-		prevEl: '.offer__arrow-prev',
-	},
 });
+
+
+let questions = document.querySelectorAll('.question__item');
+questions.forEach(function (question) {
+	question.querySelector('.question__name').addEventListener('click', function () {
+		question.classList.toggle('active');
+		let questionText = question.querySelector('.question__text');
+		let maxHeightVW = questionText.scrollHeight / (window.innerWidth / 100) + 0.5 + "vw";
+		let maxHeightREM = (questionText.scrollHeight / (window.innerWidth / 100)) * 3.125 + 0.5 + "vw";
+
+		if (questionText.style.maxHeight) {
+			questionText.style.maxHeight = null;
+		} else {
+			if (window.innerWidth > 768) {
+				questionText.style.maxHeight = maxHeightVW;
+			} else {
+				questionText.style.maxHeight = maxHeightREM;
+			}
+		}
+	});
+})
+
+let seo = document.querySelector('.seo');
+let seoWrap = seo.querySelector('.seo__wrap');
+let seoBtn = seo.querySelector('.seo__btn-open');
+
+seoBtn.addEventListener('click', function () {
+	seoWrap.classList.toggle('visible');
+	seoBtn.classList.toggle('active');
+})
+
+
