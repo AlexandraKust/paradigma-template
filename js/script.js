@@ -115,7 +115,7 @@ burger.addEventListener('click', function () {
 
 
 // popup
-// let requestPopup = document.querySelector('.popup-request');
+let requestPopup = document.querySelector('.popup-request');
 // let openRequestPopup = document.querySelectorAll('.callback-popup');
 
 // let mapPopup = document.querySelector('.popup-map');
@@ -133,20 +133,55 @@ burger.addEventListener('click', function () {
 // })
 
 
-// checkbox 
-let checkbox = document.querySelectorAll('.agree__checkbox');
-checkbox.forEach(function (item) {
-	let mainBtn = item.closest('form').querySelector('.main-btn');
-	item.classList.add('check');
+// закрытие popup
+let popups = document.querySelectorAll('.popup');
+popups.forEach(function (popup) {
+	let body = popup.querySelector(".popup__body");
+	let close = popup.querySelector(".popup__close");
+	let nothnx = popup.querySelector(".popup__nothnx");
 
-	item.addEventListener('click', function () {
-		item.classList.toggle('check');
-		if (!item.classList.contains('check')) {
-			mainBtn.setAttribute('disabled', 'disabled');
-		} else {
-			mainBtn.removeAttribute('disabled', 'disabled');
-		}
-		mainBtn.classList.toggle('disabled');
+	close.addEventListener('click', function () {
+		closePopup(popup)
+	});
+
+	if (nothnx) {
+		nothnx.addEventListener('click', function () {
+			closePopup(popup)
+		});
+	}
+
+	document.addEventListener('click', (e) => {
+		const withinBoundaries = e.composedPath().includes(body);
+
+		if (!withinBoundaries) closePopup(popup);
+	})
+})
+
+function closePopup(popup) {
+	popup.classList.remove('active');
+	document.body.classList.remove('lock');
+}
+
+// checkbox 
+let agreeForms = document.querySelectorAll('.agree-form');
+agreeForms.forEach(function (agreeForm) {
+	let mainBtn = agreeForm.querySelector('.main-btn');
+	let checkbox = agreeForm.querySelectorAll('.agree__checkbox');
+
+	checkbox.forEach(function (item) {
+		item.classList.add('check');
+
+		item.addEventListener('click', function () {
+			item.classList.toggle('check');
+			let checkboxCheck = agreeForm.querySelectorAll('.agree__checkbox.check');
+
+			if (checkbox.length != checkboxCheck.length) {
+				mainBtn.setAttribute('disabled', 'disabled');
+			} else {
+				mainBtn.removeAttribute('disabled', 'disabled');
+			}
+			mainBtn.classList.toggle('disabled');
+		})
 	})
 })
 
@@ -171,8 +206,6 @@ if (btnUp) {
 
 
 
-
-
 // маска на телефон
 $("input[type='tel']").mask('+7(999)999-99-99');
 jQuery.validator.addMethod("checkMaskPhone", function (value, element) {
@@ -189,6 +222,10 @@ $('[data-form-validate-js]').each(function () {
 			phone: {
 				required: true,
 				checkMaskPhone: true,
+			},
+			mail: {
+				required: true,
+				email: true,
 			}
 		},
 		errorPlacement: function (error, element) { },

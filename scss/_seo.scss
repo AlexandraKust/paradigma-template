@@ -70,7 +70,7 @@
 
 @media (max-width: 768px) {
 	.seo {
-		padding: 1.5rem 0 6.4rem;
+		padding: 0.6rem 0 6rem;
 
 		&__title {
 			margin-bottom: 1.8rem;
@@ -90,6 +90,7 @@
 			max-height: 19.2rem;
 			font-size: 0.8rem;
 			line-height: 200%;
+			text-align: center;
 		}
 
 		&__btn-open {

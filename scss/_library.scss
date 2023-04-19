@@ -158,7 +158,8 @@ body {
 		border-radius: 0.52vw;
 		transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
-		&:hover {
+		&:hover:not(:disabled),
+		&:hover:not(.disabled) {
 			color: #fff;
 			background: $accent-color;
 		}
@@ -169,7 +170,8 @@ body {
 		background: $accent-color;
 		transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
-		&:hover {
+		&:hover:not(:disabled),
+		&:hover:not(.disabled) {
 			background: darken($color: $accent-color, $amount: 20%);
 		}
 	}
@@ -189,7 +191,8 @@ body {
 		opacity: 0.5;
 	}
 
-	&:active {
+	&:active:not(:disabled),
+	&:active:not(.disabled) {
 		transform: scale(0.95);
 	}
 }
@@ -325,6 +328,54 @@ body {
 	&.active {
 		bottom: 1.3vw;
 	}
+}
+
+// согласие с чекбоксом
+.agree {
+	align-items: center;
+
+	&__checkbox {
+		position: relative;
+		flex: 0 0 1.15vw;
+		height: 1.15vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.88vw;
+		border-radius: 0.15625vw;
+		background: transparent;
+		border: 0.05vw solid $accent-color;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			width: 0.46875vw;
+			height: 0.36vw;
+			background: url('../media/svg/check.svg') 0 0 / 100% 100% no-repeat;
+			display: none;
+		}
+
+		&.check {
+			background: $accent-color;
+
+			&::after {
+				display: block;
+			}
+		}
+	}
+
+	&__text {
+		flex: 1 1 auto;
+		font-size: 0.73vw;
+		line-height: 143%;
+		color: $main-color;
+		cursor: default;
+	}
+}
+
+.validate_error {
+	background-color: rgba($color: $accent-color, $alpha: 0.05);
+	border: 0.052vw solid $accent-color;
 }
 
 @media (max-width: 768px) {

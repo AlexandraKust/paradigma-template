@@ -1,0 +1,243 @@
+.footer {
+	padding: 3.2vw 0 3.9vw;
+	background-color: $main-color;
+
+	&__nav {
+		width: 100%;
+		padding-bottom: 3.17vw;
+		margin-bottom: 3.17vw;
+		justify-content: space-between;
+		// gap: 8.59375vw;
+		border-bottom: 0.1vw solid #3a3a3a;
+		overflow: hidden;
+	}
+
+	&__item {
+		flex: 0 0 fit-content;
+		max-width: 14.6vw;
+		padding-right: 0.8vw;
+	}
+
+	&__name {
+		margin-bottom: 1vw;
+		white-space: nowrap;
+		font-weight: 500;
+		font-size: 1vw;
+		line-height: 1.3vw;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #959595;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.1vw;
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 0.833vw;
+		line-height: 1vw;
+		letter-spacing: 0.01em;
+		color: #fff;
+		transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+		&:hover {
+			color: $accent-color;
+			text-decoration: underline;
+		}
+	}
+
+	&__form {
+		flex: 0 0 27.6vw;
+
+		.footer__link {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: 1.14vw;
+		font-weight: 500;
+		font-size: 0.833vw;
+		line-height: 162%;
+		letter-spacing: 0.01em;
+		color: #fff;
+	}
+
+	&__fields {
+		margin-bottom: 1.145vw;
+		border-radius: 0.52vw;
+		background: #fff;
+	}
+
+	&__input {
+		flex: 1 1 auto;
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+	}
+
+	&__btn {
+		font-family: 'Cera Pro';
+		padding: 1.09375vw 2.55vw;
+		border-radius: 0.52vw;
+		font-weight: 500;
+		font-size: 0.833vw;
+		line-height: 1.2vw;
+		text-align: center;
+		letter-spacing: 0.07em;
+		color: #fff;
+		background-color: $accent-color;
+		transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+		&:hover {
+			background: darken($color: $accent-color, $amount: 7%);
+		}
+	}
+
+	&__data {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		flex: 0 0 7.8125vw;
+	}
+
+	&__rights {
+		font-size: 0.73vw;
+		line-height: 171%;
+		color: #fff;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.footer__link {
+			font-size: 0.73vw;
+			line-height: 171%;
+			color: #E11520;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__autor {
+		flex: 0 0 7.3vw;
+		font-size: 0.73vw;
+		line-height: 171%;
+		text-decoration: underline;
+		color: #fff;
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 3.8rem 0 4.8rem;
+
+		&__nav {
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 3.1rem;
+			margin-bottom: 3.7rem;
+			gap: 4.3rem;
+			border-width: 0.2rem;
+		}
+
+		&__item {
+			max-width: none;
+			padding: 0;
+			text-align: center;
+		}
+
+		&__name {
+			margin-bottom: 0.75rem;
+			font-size: 1.6rem;
+			line-height: 2rem;
+			letter-spacing: 0.01em;
+		}
+
+		&__list {
+			gap: 1rem;
+		}
+
+		&__link {
+			font-size: 1.3rem;
+			line-height: 85%;
+		}
+
+		&__form {
+			flex-basis: 100%;
+			text-align: center;
+
+			.footer__link {
+				font-size: 1rem;
+				line-height: 260%;
+			}
+		}
+
+		&__text {
+			margin-top: -0.4rem;
+			margin-bottom: 1.2rem;
+			text-align: center;
+			font-size: 1.2rem;
+			line-height: 133%;
+		}
+
+		&__fields {
+			margin-bottom: 0.8rem;
+			border-radius: 1rem;
+		}
+
+		&__input {
+			padding-top: 1.8rem;
+			padding-bottom: 1.8rem;
+		}
+
+		&__btn {
+			padding: 1.8rem 1.4rem;
+			border-radius: 1rem;
+			font-size: 1rem;
+			line-height: 1.3rem;
+			letter-spacing: 0;
+		}
+
+		&__data {
+			flex-direction: column;
+			align-items: center;
+			gap: 2.5rem;
+		}
+
+		&__logo {
+			width: 15rem;
+		}
+
+		&__rights {
+			font-size: 1rem;
+			line-height: 150%;
+			text-align: center;
+		}
+
+		&__links .footer__link {
+			font-size: 1rem;
+			line-height: 150%;
+		}
+
+		&__autor {
+			flex-basis: 100%;
+			font-size: 1rem;
+			line-height: 150%;
+			text-align: center;
+		}
+	}
+}
