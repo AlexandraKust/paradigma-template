@@ -7,6 +7,44 @@ function loaded() {
 	// });
 }
 
+// всплывающие заголовки
+$(".section-title").each(anime);
+// $(".anim").each(anime);
+function anime() {
+	var thisTitle = $(this);
+	var accent = thisTitle.children('.section-title__accent');
+	var offsetTop = thisTitle.offset().top - $(window).height();
+	if ($(document).scrollTop() > offsetTop) {
+		// thisTitle.addClass('fade-in');
+		accent.addClass('active');
+	}
+	$(window).scroll(function (event) {
+		offsetTop = thisTitle.offset().top - $(window).height();
+		if ($(document).scrollTop() > offsetTop) {
+			// thisTitle.addClass('fade-in');
+			accent.addClass('active');
+		}
+	});
+}
+$('.section-title').not('h1').addClass('animation');
+
+// анимация подгрузки контента при скролле
+$(window).on('scroll', function () {
+	$('.animation').each(function () {
+		var element = $(this);
+
+		if (!(element.hasClass('visible'))) {
+			var scroll = $(window).scrollTop(),
+				position = element.offset().top,
+				windowHeight = $(window).height();
+
+			if ((scroll + windowHeight) > position) {
+				element.addClass('visible');
+			};
+		};
+	});
+});
+
 // select
 let select = document.querySelectorAll('select');
 select.forEach(function (item) {
@@ -17,7 +55,7 @@ select.forEach(function (item) {
 
 // форма поиска
 let searchInput = document.getElementById("inputSearch");
-searchInput.addEventListener('input', search);
+if (searchInput) searchInput.addEventListener('input', search);
 
 function search() {
 	let filter = searchInput.value.toUpperCase();
@@ -60,12 +98,14 @@ function search() {
 
 // бегущая строка
 let tickerRow = document.querySelector('.ticker__row');
-let tickerLength = tickerRow.querySelectorAll('.ticker__item').length;
-tickerRow.style.animationDuration = tickerLength * 4 + 's';
+if (tickerRow) {
+	let tickerLength = tickerRow.querySelectorAll('.ticker__item').length;
+	tickerRow.style.animationDuration = tickerLength * 4 + 's';
 
-let ticker = tickerRow.querySelector('.ticker__wrap');
-let tickerDouble = ticker.cloneNode(true);
-ticker.after(tickerDouble)
+	let ticker = tickerRow.querySelector('.ticker__wrap');
+	let tickerDouble = ticker.cloneNode(true);
+	ticker.after(tickerDouble)
+}
 
 // submenu mobile
 if (window.innerWidth < 768) {
@@ -152,7 +192,6 @@ popups.forEach(function (popup) {
 
 	document.addEventListener('click', (e) => {
 		const withinBoundaries = e.composedPath().includes(body);
-
 		if (!withinBoundaries) closePopup(popup);
 	})
 })
@@ -320,25 +359,7 @@ $("[data-anchor-btn-js]").on("click", function (event) {
 });
 
 
-// всплывающие заголовки
-$(".section-title").not('.no-anim').each(anime);
-$(".anim").each(anime);
-function anime() {
-	var thisTitle = $(this);
-	var accent = thisTitle.children('.section-title__accent');
-	var offsetTop = thisTitle.offset().top - $(window).height();
-	if ($(document).scrollTop() > offsetTop) {
-		thisTitle.addClass('fade-in');
-		accent.addClass('active');
-	}
-	$(window).scroll(function (event) {
-		offsetTop = thisTitle.offset().top - $(window).height();
-		if ($(document).scrollTop() > offsetTop) {
-			thisTitle.addClass('fade-in');
-			accent.addClass('active');
-		}
-	});
-}
+
 
 
 // accordion
@@ -348,23 +369,6 @@ accordionItem.forEach(function (item) {
 		item.classList.toggle('active')
 	})
 })
-
-// анимация подгрузки контента при скролле
-$(window).on('scroll', function () {
-	$('.animation').each(function () {
-		var element = $(this);
-
-		if (!(element.hasClass('visible'))) {
-			var scroll = $(window).scrollTop(),
-				position = element.offset().top,
-				windowHeight = $(window).height();
-
-			if ((scroll + windowHeight) > position) {
-				element.addClass('visible');
-			};
-		};
-	});
-});
 
 const offerSwiper = new Swiper('.offer__swiper', {
 	loop: false,
@@ -410,12 +414,113 @@ questions.forEach(function (question) {
 })
 
 let seo = document.querySelector('.seo');
-let seoWrap = seo.querySelector('.seo__wrap');
-let seoBtn = seo.querySelector('.seo__btn-open');
+if (seo) {
+	let seoWrap = seo.querySelector('.seo__wrap');
+	let seoBtn = seo.querySelector('.seo__btn-open');
 
-seoBtn.addEventListener('click', function () {
-	seoWrap.classList.toggle('visible');
-	seoBtn.classList.toggle('active');
+	seoBtn.addEventListener('click', function () {
+		seoWrap.classList.toggle('visible');
+		seoBtn.classList.toggle('active');
+	})
+}
+
+
+// tabs
+$('.hero__tab').click(function () {
+	$(this).toggleClass("active");
+	$(".hero__tab").not(this).removeClass("active");
 })
 
+// кнопка показать еще
+let btnMore = document.querySelectorAll('.btn-more');
+if (btnMore) {
+	btnMore.forEach(function (btn) {
+		let btnParent = btn.parentNode.querySelector('ul');
+		let listItem = btnParent.querySelectorAll('li');
 
+		if (listItem.length < 13) {
+			btn.classList.add('hidden');
+		}
+		if (btn) {
+			btn.addEventListener('click', function () {
+				listItem.forEach(function (li) {
+					li.classList.add('visible');
+				})
+				btn.classList.add('hidden');
+			})
+		}
+	});
+}
+
+// подсчет всех карточек с шаблонами на странице
+cardsCount = document.querySelector('.cards-count');
+if (cardsCount) {
+	let cards = document.querySelectorAll('.template-item').length;
+	cardsCount.innerHTML = cards;
+}
+
+// калькулятор
+let calcForm = document.querySelector('.calculate__form');
+// получаем начальную цену из отмеченного radioinput
+if (calcForm) {
+	let totalPrice = calcForm.querySelector('.item-price__total span');
+	let defaultTotalPrice = calcForm.querySelector('input[type=radio][checked]').parentNode.querySelector('.calculate__price').innerHTML;
+
+	// получаем стоимость отмечанных доп услуг по дефолту
+	let chekedCheckboxs = calcForm.querySelectorAll('input[type=checkbox][checked]');
+	let sum = 0;
+	chekedCheckboxs.forEach(item => {
+		item.classList.add('checked')
+		let priceItem = Number(item.parentNode.querySelector('.calculate__price').innerHTML);
+		sum += priceItem
+	})
+
+	// суммируем начальную стоимость + доп.услуги и передаем значение в html
+	totalPrice.innerHTML = parseInt(defaultTotalPrice) + sum;
+	let newPrice = Number(totalPrice.innerHTML);
+
+	// высчитываем полную цену без скидки и передаем значение в html
+	let oldPrice = calcForm.querySelector('.item-price__old');
+	if (oldPrice) {
+		let discount = calcForm.querySelector('.item-price__discount').innerHTML;
+		var discountCount = Number(discount.replace(/\D/g, ''));
+		var oldCount = calcForm.querySelector('.item-price__number span');
+		let defaultOldPrice = Math.round((newPrice * 100) / (100 - discountCount));
+		oldCount.innerHTML = defaultOldPrice;
+		var editOld = 0;
+	}
+
+	let calcInputs = calcForm.querySelectorAll('.calculate__input');
+	calcInputs.forEach(function (calcInput) {
+		let price = Number(calcInput.parentNode.querySelector('.calculate__price').innerHTML);
+
+		calcInput.addEventListener('change', function () {
+			calcInput.classList.toggle('checked')
+			if (calcInput.classList.contains('checked')) {
+				calcInput.setAttribute('checked', 'checked')
+			} else {
+				calcInput.removeAttribute('checked')
+			}
+
+			if (calcInput.type == 'checkbox') {
+				if (calcInput.checked) {
+					newPrice += price
+				} else {
+					newPrice -= price
+				}
+
+			} else if (calcInput.type == 'radio') {
+				let chekedCheckboxs = calcForm.querySelectorAll('input[type=checkbox][checked]');
+				let sumPrice = 0;
+				chekedCheckboxs.forEach(item => {
+					let priceItem = Number(item.parentNode.querySelector('.calculate__price').innerHTML);
+					sumPrice += priceItem
+				})
+				newPrice = price + sumPrice
+			}
+			editOld = Math.round((newPrice * 100) / (100 - discountCount));
+			oldCount.innerHTML = editOld;
+			totalPrice.innerHTML = newPrice;
+		})
+	})
+}

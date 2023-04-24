@@ -57,6 +57,12 @@
 		overflow: hidden;
 		transition: all 0.5s ease-in-out;
 	}
+
+	.main--catalog & {
+		.question__title {
+			text-align: left;
+		}
+	}
 }
 
 @media (max-width: 768px) {

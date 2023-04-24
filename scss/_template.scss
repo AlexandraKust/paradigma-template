@@ -18,10 +18,19 @@
 		margin-bottom: 3.75vw;
 	}
 
-	&__more {
+	&__more-link {
 		margin: 0 auto;
 	}
+
+	.main--catalog & {
+		padding: 2.8vw 0 5.4vw;
+
+		.template__title {
+			text-align: left;
+		}
+	}
 }
+
 
 .template-item {
 	display: flex;
@@ -29,6 +38,16 @@
 	flex: 0 0 calc((100% - (3.6vw * 2)) / 3);
 	border-radius: 1vw 1vw 0.625vw 0.625vw;
 	transition: box-shadow 0.3s ease-in-out;
+
+	.main--catalog & {
+		&:nth-child(n + 13) {
+			display: none;
+		}
+
+		&.visible {
+			display: flex;
+		}
+	}
 
 	&:hover {
 		box-shadow: 0 0 1vw #cecece;

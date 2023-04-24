@@ -30,6 +30,74 @@
 			flex: 0 0 1.4vw;
 		}
 	}
+
+	&__tabs {
+		flex-wrap: wrap;
+		column-gap: 1.3vw;
+		row-gap: 0.88vw;
+	}
+
+	&__tab {
+		flex: 0 0 fit-content;
+		padding: 0.57vw 1.04vw;
+		border-radius: 0.52vw;
+		font-weight: 500;
+		font-size: 0.73vw;
+		line-height: 0.9375vw;
+		color: #333;
+		background-color: #fff;
+		transition-property: box-shadow, color, background-color;
+		transition: 0.3s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0.1vw 1vw #dcdcdc;
+		}
+
+		&.active {
+			background-color: $accent-color;
+			color: #fff;
+		}
+	}
+
+	&__label {
+		position: relative;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		padding: 0.52vw 1.3vw;
+		border-radius: 26vw;
+		font-weight: 500;
+		font-size: 0.52vw;
+		line-height: 0.677vw;
+		color: #fff;
+		background-color: #12C868;
+
+		&::before {
+			content: '';
+			position: relative;
+			left: 0;
+			width: 0.42vw;
+			height: 0.3125vw;
+			margin-right: 0.26vw;
+			background: url('../media/svg/check.svg') 0 0 / 100% auto no-repeat;
+		}
+	}
+
+	&--card {
+		padding-bottom: 1.6vw;
+
+		.hero__title {
+			margin-bottom: 0.83vw;
+			font-weight: 700;
+			text-align: left;
+		}
+
+		.hero__subtitle {
+			margin-bottom: 0.83vw;
+			text-align: left;
+		}
+	}
 }
 
 // форма поиска
@@ -243,6 +311,45 @@
 			&-icon {
 				width: 1.3rem;
 			}
+		}
+
+		&__tabs {
+			column-gap: 0.8rem;
+			row-gap: 0.8rem;
+		}
+
+		&__tab {
+			padding: 0.5rem 1.2rem;
+			border-radius: 1rem;
+			font-size: 0.8rem;
+			line-height: 125%;
+		}
+
+		&__label {
+			padding: 0.3rem 0.8rem;
+			border-radius: 50rem;
+			font-size: 0.6rem;
+			line-height: 0.8rem;
+
+			&::before {
+				width: 0.4rem;
+				height: 0.3rem;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	.hero--card {
+		padding-bottom: 2rem;
+
+		.hero__title {
+			margin-bottom: 0.6rem;
+		}
+
+		.hero__subtitle {
+			margin-bottom: 1rem;
+			font-size: 1.4rem;
+			line-height: 143%;
 		}
 	}
 

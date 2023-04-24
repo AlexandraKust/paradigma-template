@@ -1,0 +1,327 @@
+.calculate {
+	position: relative;
+
+	&__body {
+		position: sticky;
+		top: 1vw;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+		min-height: 41.67vw;
+		padding: 1.5vw 2.08vw 2.5vw;
+		border-radius: 1vw;
+		background-color: #fff;
+	}
+
+	&__title {
+		margin-bottom: 2.6vw;
+		font-weight: 900;
+		font-size: 1.875vw;
+		line-height: 128%;
+		color: $main-color;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		gap: 2.3vw;
+	}
+
+	&__item {
+		position: relative;
+		align-items: start;
+		gap: 1.93vw;
+
+		&:not(:last-of-type)::before {
+			content: '';
+			position: absolute;
+			top: 2.34vw;
+			bottom: -1.93vw;
+			left: 0.88vw;
+			width: 0.52vw;
+			border-left: 0.052vw dashed #ccc;
+		}
+
+		&:last-of-type {
+			flex: 1 1 auto;
+
+			.calculate__number {
+				position: relative;
+				top: 0.5vw;
+			}
+		}
+	}
+
+	&__number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 1.82vw;
+		height: 1.82vw;
+		border-radius: 50%;
+		background-color: #333;
+		font-weight: 700;
+		font-size: 0.73vw;
+		line-height: 0.9375vw;
+		color: #fff;
+	}
+
+	&__wrap {
+		align-items: start;
+		gap: 0.4vw;
+	}
+
+	&__name {
+		width: fit-content;
+		margin-bottom: 0.9375vw;
+		font-size: 0.83vw;
+		line-height: 1vw;
+		color: #626262;
+	}
+
+	&__radiobtn,
+	&__checkbox {
+		position: relative;
+		align-items: center;
+		gap: 0.42vw;
+
+		&:not(:last-child) {
+			margin-bottom: 0.45vw;
+		}
+	}
+
+	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		z-index: 5;
+		cursor: pointer;
+
+		&:checked {
+
+			&~.calculate__radio,
+			&~.calculate__check {
+				background-color: $accent-color;
+
+				path {
+					fill: #fff;
+				}
+			}
+
+			&~.calculate__value,
+			&~.calculate__wrap .calculate__value {
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__radio,
+	&__check {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 1vw;
+		height: 1vw;
+		border-radius: 50%;
+		background-color: #f1f1f1;
+		transition: background-color 0.3s ease-in-out;
+
+		svg {
+			width: 0.36vw;
+		}
+
+		path {
+			fill: #c8c8c8;
+			transition: fill 0.3s ease-in-out;
+		}
+	}
+
+	&__value {
+		flex-shrink: 0;
+		font-size: 1vw;
+		line-height: 1.3vw;
+	}
+
+	&__price {
+		display: none;
+	}
+
+	&__checkbox .hint__text {
+		position: absolute;
+		top: -0.3vw;
+		left: auto;
+		right: -5.21vw;
+		width: 10.42vw;
+		transform: translateY(-100%);
+	}
+
+	&__checkbox .calculate__hint {
+		top: 0.45vw;
+	}
+
+	&__check {
+		border-radius: 0.2vw;
+	}
+
+	&__purchase {
+		gap: 1.67vw;
+	}
+
+	&__btn {
+		padding-top: 1.3vw;
+		padding-bottom: 1.3vw;
+
+		.main-btn__text {
+			font-size: 1.25vw;
+			line-height: 1.5625vw;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.calculate {
+
+		&__body {
+			position: static;
+			top: 0;
+			min-height: auto;
+			padding: 2.5rem 2.2rem 2.7rem;
+			border-radius: 2rem;
+		}
+
+		&__title {
+			margin-bottom: 1.5rem;
+			padding-left: 0.7rem;
+			font-size: 2.4rem;
+			line-height: 125%;
+		}
+
+		&__form {
+			gap: 2rem;
+		}
+
+		&__item {
+			gap: 2.1rem;
+			margin-left: -3.3rem;
+
+			&:first-of-type {
+				.calculate__wrap {
+					gap: 0.8rem;
+				}
+
+				.calculate__hint {
+					top: 0.6rem;
+				}
+			}
+
+			&:last-of-type .calculate__number {
+				top: 1.5rem;
+			}
+
+			&:not(:last-of-type)::before {
+				display: none;
+			}
+		}
+
+		&__number {
+			flex-basis: 2rem;
+			height: 2rem;
+			font-size: 0.7rem;
+			line-height: 0.9rem;
+		}
+
+		&__wrap {
+			gap: 0.6rem;
+		}
+
+		&__name {
+			margin-bottom: 1rem;
+			padding-top: 0.4rem;
+			font-size: 1rem;
+			line-height: 1.3rem;
+		}
+
+		&__radiobtn,
+		&__checkbox {
+			gap: 0.8rem;
+
+			&:not(:last-child) {
+				margin-bottom: 1.4rem;
+			}
+		}
+
+		&__radio,
+		&__check {
+			flex: 0 0 2rem;
+			height: 2rem;
+
+			svg {
+				width: 0.7rem;
+			}
+		}
+
+		&__value {
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+		}
+
+		&__checkbox .hint__text {
+			position: absolute;
+			top: -0.3rem;
+			left: auto;
+			right: -3rem;
+			width: 15rem;
+		}
+
+		&__checkbox .calculate__hint {
+			top: 0.5rem;
+		}
+
+		&__check {
+			border-radius: 0.4rem;
+		}
+
+		&__purchase {
+			flex-wrap: wrap;
+			font-size: 2rem;
+			line-height: 2.5rem;
+
+			span {
+				font-size: 4rem;
+				line-height: 5rem;
+			}
+
+			.item-price__discount {
+				position: relative;
+				top: 0.6rem;
+				padding: 0.5rem 0.9rem;
+				border-radius: 50rem;
+				font-size: 1.2rem;
+				line-height: 1.5rem;
+			}
+
+			.item-price__old {
+				flex-basis: 100%;
+				justify-content: space-between;
+			}
+		}
+
+		&__btn {
+			padding-top: 1.5rem;
+			padding-bottom: 1.9rem;
+			margin-top: -0.5rem;
+			border-radius: 1rem;
+
+			.main-btn__text {
+				font-size: 1.3rem;
+				line-height: 1.6rem;
+			}
+		}
+	}
+}

@@ -86,7 +86,6 @@
 			font-size: 1vw;
 			line-height: 125%;
 		}
-
 	}
 
 	&__agree {
@@ -156,6 +155,7 @@
 
 			span {
 				position: relative;
+				white-space: nowrap;
 
 				&::after {
 					content: '';
@@ -214,4 +214,125 @@
 			text-decoration: line-through;
 		}
 	}
+}
+
+@media (max-width: 768px) {
+	.popup {
+
+		&__body {
+			width: 80%;
+			padding: 2rem 2rem 2.5rem;
+			border-radius: 1rem
+		}
+
+		&__close {
+			top: 1rem;
+			right: 1rem;
+
+			svg {
+				width: 1rem;
+			}
+		}
+
+		&__title {
+			margin-bottom: 1.2rem;
+			font-size: 2rem;
+			line-height: 125%;
+		}
+
+		&__descr {
+			margin-bottom: 1.2rem;
+			font-size: 0.9rem;
+			line-height: 144%;
+		}
+
+		&__input {
+			margin-bottom: 0.8rem;
+		}
+
+		&__btn {
+			min-height: 4.9rem;
+			margin-bottom: 1rem;
+			border-radius: 1rem;
+
+			.main-btn__text {
+				font-size: 1.2rem;
+				line-height: 1.5rem;
+			}
+		}
+
+		&__agree {
+			margin-bottom: 0.7rem;
+		}
+
+		&__img {
+			height: 11rem;
+			margin-bottom: 2rem;
+			border-radius: 1rem;
+
+			img:first-child {
+				border-radius: 1rem;
+			}
+
+			img:last-child {
+				right: -0.4rem;
+				bottom: -1.51rem;
+				width: 1.93rem;
+				height: 4.27rem;
+			}
+		}
+
+		&__nothnx {
+			font-size: 0.8rem;
+
+			&::after {
+				height: 0.1rem;
+			}
+		}
+	}
+
+	.popup-wait {
+		.popup__body {
+			padding-bottom: 3rem;
+		}
+
+		.popup__descr {
+			margin-bottom: 2rem;
+			padding: 0 0.3rem;
+			font-size: 1.2rem;
+			line-height: 125%;
+
+			span::after {
+				height: 0.1rem;
+			}
+		}
+	}
+
+	.popup-service {
+		padding: 0.8rem 1rem;
+		margin-bottom: 1.2rem;
+		border-radius: 1rem;
+
+		&__name {
+			flex-basis: 65%;
+			font-size: 1.2rem;
+			line-height: 125%;
+		}
+
+		&__price {
+			font-size: 0.9rem;
+			line-height: 125%;
+		}
+
+		&__total span {
+			font-size: 1.4rem;
+			line-height: 144%;
+		}
+
+		&__old span {
+			font-size: 1.1rem;
+			line-height: 125%;
+		}
+	}
+
 }

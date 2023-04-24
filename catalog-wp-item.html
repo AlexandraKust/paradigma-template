@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Paradigma template</title>
+	<title>Каталог WordPress</title>
 	<link rel="stylesheet" href="libs/custom-select.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
@@ -90,79 +90,751 @@
 		</div>
 	</header>
 
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__row flex">
+				<a href="index.html" class="breadcrumbs__item">Главная</a>
+				<a href="catalog.html" class="breadcrumbs__item">Каталог шаблонов</a>
+				<a href="catalog-wp.html" class="breadcrumbs__item">Каталог шаблонов на WordPress</a>
+				<a href="catalog-wp-item.html" class="breadcrumbs__item active">Строительство</a>
+			</div>
+		</div>
+	</div>
 
 	<section class="hero">
 		<div class="container-small">
-			<h1 class="hero__title section-title no-anim fade-in">
-				Первый в СНГ магазин готовых авторских
-				<span class="section-title__accent">
-					продающих сайтов,
-					<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
-							stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
-					</svg>
-				</span>
-				лендингов и квизов
+			<h1 class="hero__title section-title">
+				Каталог авторских премиум сайтов по строительству (<span class="cards-count">16</span>)
 			</h1>
-			<h2 class="hero__subtitle">Хватит мучаться с разработчиками! <b>Купи, установи, запусти всего в 3 клика</b> нужный
-				сайт и
-				получай заявки с конверсией от 5% уже завтра
-			</h2>
 
-			<form action="#" class="hero__form form-search flex">
-				<div class="form-search__select">
-					<select name="template">
-						<option value="Все шаблоны">Все шаблоны</option>
-						<option value="Строительство">Строительство</option>
-						<option value="Мебель">Мебель</option>
-						<option value="Услуги красоты">Услуги красоты</option>
-						<option value="Производство">Производство</option>
-						<option value="Коуч / Психолог">Коуч / Психолог</option>
-						<option value="Медицина">Медицина</option>
-					</select>
-				</div>
-				<div class="form-search__wrap">
-					<input type="text" id="inputSearch" class="form-search__input input" placeholder="Поиск ...">
-					<ul class="form-search__list">
-						<li class="form-search__item">Мебель</li>
-						<li class="form-search__item">Кухня</li>
-						<li class="form-search__item">Ремонт</li>
-						<li class="form-search__item">Стоматология</li>
-						<li class="form-search__item">Бухгалтерия</li>
-					</ul>
-				</div>
-				<button class="form-search__btn" aria-label="поиск">
-					<img src="media/svg/search.svg" alt="лупа">
-				</button>
-			</form>
-
-			<div class="hero__descr flex">
-				<img src="media/svg/heart.svg" alt="сердце" class="hero__descr-icon">
-				<p>Все шаблоны полностью на русском языке и с русской админ-панелью</p>
-			</div>
 		</div>
-		<div class=" hero__ticker ticker">
-			<div class="ticker__row flex">
-				<div class="ticker__wrap flex">
-					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-1.jpg" alt="картинка с шаблоном сайта">
-					</a>
-					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-2.jpg" alt="картинка с шаблоном сайта">
-					</a>
-					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-3.jpg" alt="картинка с шаблоном сайта">
-					</a>
-					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-4.jpg" alt="картинка с шаблоном сайта">
-					</a>
-				</div>
-			</div>
+		<div class="container">
+			<ul class="hero__tabs flex">
+				<li class="hero__tab active">Строительство</li>
+				<li class="hero__tab">Мебель</li>
+				<li class="hero__tab">Услуги красоты</li>
+				<li class="hero__tab">Производство</li>
+				<li class="hero__tab">Коуч / Психолог</li>
+				<li class="hero__tab">Услуги красоты</li>
+				<li class="hero__tab">Медицина</li>
+				<li class="hero__tab">Интернет-магазины</li>
+				<li class="hero__tab">Автомобили</li>
+				<li class="hero__tab">Недвижимость</li>
+				<li class="hero__tab">Юр.услуги</li>
+				<li class="hero__tab">Оптовая торговля</li>
+				<li class="hero__tab">Инфобиз</li>
+				<li class="hero__tab">B2B</li>
+				<li class="hero__tab">Услуги населению</li>
+				<li class="hero__tab">Сайты для гостиниц</li>
+				<li class="hero__tab">Еда / Рестораны</li>
+				<li class="hero__tab">Бизнес</li>
+				<li class="hero__tab">Образование</li>
+				<li class="hero__tab">Путешествия</li>
+				<li class="hero__tab">Другие</li>
+			</ul>
 		</div>
 	</section>
 
-	<main class="main">
+	<main class="main main--catalog">
+		<!-- популярные шаблоны -->
+		<section class="template">
+			<div class="container">
+				<ul class="template__row flex">
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-1.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-2.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-3.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-1.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-2.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-3.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-1.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-2.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-3.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-1.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-2.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-3.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-2.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-3.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-2.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+					<li class="template__item template-item">
+						<div class="template-item__img">
+							<img src="media/img/card-3.jpg" alt="">
+							<div class="template-item__labels flex">
+								<p class="template-item__label template-item__label-gray">Wordpress</p>
+								<p class="template-item__label template-item__label-pink">Хит</p>
+							</div>
+						</div>
+						<div class="template-item__content">
+							<div class="template-item__data flex">
+								<p class="template-item__status">Обновлено</p>
+								<div class="template-item__stars flex">
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+									<svg class="template-item__star">
+										<use xlink:href="media/svg/star.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
+							<div class="template-item__price item-price flex">
+								<p class="item-price__total"><span>4900</span> руб</p>
+								<div class="item-price__old flex">
+									<p class="item-price__number"><span>13 000</span> руб</p>
+									<p class="item-price__discount">-70%</p>
+								</div>
+							</div>
+							<div class="template-item__btns flex">
+								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
+								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<button class="template__more btn-more">
+					<span>Смотреть больше шаблонов</span>
+				</button>
+			</div>
+		</section>
 
 		<!-- почему -->
 		<section class="why">
@@ -179,7 +851,7 @@
 					стоит<br class="mobile"> выбрать шаблоны
 					от Paradigma.website
 				</h2>
-				<ul class="why__list flex animation">
+				<ul class="why__list flex">
 					<li class="why__item flex">
 						<div class="why__text">
 							<p class="why__name">От 7% средняя конверсия в заявку</p>
@@ -254,1063 +926,109 @@
 			</div>
 		</section>
 
-		<!-- всё включено -->
-		<section class="content">
+		<!-- купить готовый сайт -->
+		<section class="buy">
 			<div class="container-small">
-				<h2 class="content__title section-title">
+				<h2 class="buy__title section-title">
+					Купить
 					<span class="section-title__accent">
-						Все включено!
+						готовый
 						<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
 								stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
 						</svg>
 					</span>
-					Интеграции
-					и&nbsp;конверсионные фишки уже в шаблоне
+					сайт
 				</h2>
-				<p class="content__subtitle">
-					Вам ничего не придется делать в коде, все продумано до мелочей
+				<p class="buy__text">
+					Темы WordPress — это готовые макеты, созданные для WordPress — одной из самых популярных систем управления
+					контентом, используемой для ведения
+					<a href="https://www.templatemonster.com/blog-wordpress-themes/" class="buy__link" target="_blank">блогов</a>,
+					новостных сайтов и проектов электронной коммерции. Эти шаблоны
+					представляют собой настраиваемые решения для создания онлайн-ресурса с нуля или простой модификации
+					существующего.
+				</p>
+				<p class="buy__text">
+					Принимая во внимание потребности наших клиентов, авторы наших торговых площадок посвятили много времени
+					созданию тем для различных веб-сайтов
+					(&nbsp;<a href="https://www.templatemonster.com/cv-wordpress-themes/" class="buy__link" target="_blank">темы
+						резюме
+						WordPress</a>
+					или
+					<a href="https://www.templatemonster.com/gallery-wordpress-themes/" class="buy__link" target="_blank">темы
+						галереи WordPress</a>
+					галереи WordPress&nbsp;). Независимо от
+					вашего профессионального опыта или навыков работы с компьютером, вам удастся установить и внести изменения в
+					свой веб-сайт. Каждая тема поставляется со всей необходимой документацией, которая объясняет каждый шаг
+					процессов установки и настройки.
+				</p>
+				<p class="buy__text">
+					Эти шаблоны WordPress, основанные на Elementor и других визуальных конструкторах страниц, предлагают различные
+					виджеты и элементы контента, Bootstrap
+					(&nbsp;<a href="https://www.templatemonster.com/bootstrap-wordpress-themes/" class="buy__link"
+						target="_blank">темы
+						WordPress Bootstrap</a>&nbsp;)
+					и возможность улучшить внешний вид веб-сайта с помощью гибких родительских/дочерних тем.
 				</p>
 
-				<ul class="content__row flex">
-					<li class="content__item">
-						<p class="content__name animation">QUIZ</p>
-						<p class="content__descr animation">
-							Встроенный
-							конструктор
-							квиз&#8209;сайтов
-						</p>
-						<picture>
-							<source srcset="media/img/content-1-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-1.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">CRM</p>
-						<p class="content__descr animation">
-							Полная интеграция
-							с&nbsp;популярными CRM:
-							AMO, Битрикс24, ROISTAT, TELEGRAM
-						</p>
-						<picture>
-							<source srcset="media/img/content-2-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-2.png" alt="">
-						</picture>
-						<div class="content__play" aria-label="кнопка посмотреть видео">
-							<a href="#" data-fancybox="first-video"></a>
-							<img src="media/svg/play.svg" alt="">
-						</div>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">ADMIN</p>
-						<p class="content__descr animation">
-							Удобная и легкая админ панель на русском языке
-						</p>
-						<picture>
-							<source srcset="media/img/content-3-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-3.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">LP</p>
-						<p class="content__descr animation">
-							Внутренний конструктор лендингов и страниц
-						</p>
-						<picture>
-							<source srcset="media/img/content-4-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-4.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">CARDS</p>
-						<p class="content__descr animation">
-							Каталог товаров
-							с&nbsp;категориями и карточками
-							для&nbsp;каждого <br>
-							товара
-						</p>
-						<picture>
-							<source srcset="media/img/content-5-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-5.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">PAGES</p>
-						<p class="content__descr animation">
-							Более 15 самых востребоваемых демо-страниц
-							в каждом<br>
-							шаблоне
-						</p>
-						<picture>
-							<source srcset="media/img/content-6-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-6.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">POP-UP</p>
-						<p class="content__descr animation">
-							Более 5 вариантов редактируемых POP-UP окон
-						</p>
-						<picture>
-							<source srcset="media/img/content-7-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-7.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">SIDE<br>BAR</p>
-						<p class="content__descr animation">
-							Удобный и редактируемый
-						</p>
-						<picture>
-							<source srcset="media/img/content-8-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-8.png" alt="">
-						</picture>
-						<div class="content__play" aria-label="кнопка посмотреть видео">
-							<a href="#" data-fancybox="first-video"></a>
-							<img src="media/svg/play.svg" alt="">
-						</div>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">POP-UP</p>
-						<p class="content__descr animation">
-							Всплывающие
-							POP-UP окна на выходе и подсказки для роста конверсии
-						</p>
-						<picture>
-							<source srcset="media/img/content-9-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-9.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">HOME PAGE</p>
-						<p class="content__descr animation">
-							8 макетов для главной страницы
-						</p>
-						<picture>
-							<source srcset="media/img/content-10-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-10.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">STYLES</p>
-						<p class="content__descr animation">
-							Гибкая настройка стилей и шрифтов
-						</p>
-						<picture>
-							<source srcset="media/img/content-11-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-11.png" alt="">
-						</picture>
-					</li>
-					<li class="content__item">
-						<p class="content__name animation">И это не все</p>
-						<p class="content__descr animation">
-							Дополнительно индивидуальный функционал в каждом шаблоне
-							в&nbsp;зависимости от тематики
-						</p>
-						<svg class="content__icon" viewBox="0 0 121 119" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M60.7865 10.758L19.2306 33.5306C8.77459 39.2605 4.5036 51.8238 9.85185 61.5834L26.4908 91.9464C31.839 101.706 44.7265 104.866 55.1825 99.1364L60.4694 96.2392C62.4445 95.1569 64.6992 94.6179 66.9194 95.0289C69.6526 95.5347 72.2855 96.3346 74.8881 97.0301C79.1652 98.1731 83.4165 95.9736 84.7755 91.7604C85.6742 88.9749 86.4446 86.1074 87.7605 83.2477C88.6203 81.3789 90.1781 79.9589 91.9779 78.9726L96.4703 76.5107C106.926 70.7808 111.197 58.2176 105.849 48.458L89.2102 18.095C84.13 8.18853 71.2425 5.02811 60.7865 10.758Z" />
-							<path
-								d="M66.1047 37.013C55.985 34.4507 53.7068 48.7424 53.7068 48.7424C53.7068 48.7424 40.7029 42.8253 37.149 52.8807C33.3562 63.7721 47.8748 73.0894 66.4833 72.0573C77.6347 56.7809 77.4744 39.948 66.1047 37.013Z" />
-						</svg>
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<!-- популярные шаблоны -->
-		<section class="template">
-			<div class="container">
-				<h2 class="template__title section-title">
-					Посмотрите
-					<span class="section-title__accent">
-						популярные
-						<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
-								stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
-						</svg>
-					</span>
-					шаблоны
-				</h2>
-
-				<ul class="template__row flex">
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-
-				<a href="#" class="template__more btn-more-link" target="_blank">
-					<span>Смотреть больше шаблонов</span>
-				</a>
-			</div>
-		</section>
-
-		<!-- новые шаблоны -->
-		<section class="template">
-			<div class="container">
-				<h2 class="template__title section-title">
-					Самые
-					<span class="section-title__accent">
-						новые
-						<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
-								stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
-						</svg>
-					</span>
-					шаблоны
-				</h2>
-
-				<ul class="template__row flex">
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-					<li class="template__item template-item">
-						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
-							<div class="template-item__labels flex">
-								<p class="template-item__label template-item__label-gray">Wordpress</p>
-								<p class="template-item__label template-item__label-pink">Хит</p>
-							</div>
-						</div>
-						<div class="template-item__content">
-							<div class="template-item__data flex">
-								<p class="template-item__status">Обновлено</p>
-								<div class="template-item__stars flex">
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-									<svg class="template-item__star">
-										<use xlink:href="media/svg/star.svg#star"></use>
-									</svg>
-								</div>
-							</div>
-							<p class="template-item__title">Шаблон сайта Мебель, кухни, шкафы&#8209;купе</p>
-							<div class="template-item__price item-price flex">
-								<p class="item-price__total"><span>4900</span> руб</p>
-								<div class="item-price__old flex">
-									<p class="item-price__number"><span>13 000</span> руб</p>
-									<p class="item-price__discount">-70%</p>
-								</div>
-							</div>
-							<div class="template-item__btns flex">
-								<a href="#" class="template-item__btn template-item__btn-white">Подробнее про шаблон</a>
-								<a href="#" class="template-item__btn template-item__btn-red">Живое демо</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-
-				<a href="#" class="template__more btn-more-link" target="_blank">
-					<span>Смотреть больше шаблонов</span>
-				</a>
-			</div>
-		</section>
-
-		<!-- выгодные предложения -->
-		<section class="offer">
-			<div class="container">
-				<div class="offer__row flex">
-					<h2 class="offer__title section-title">
-						<span class="section-title__accent">
-							Выгодные
-							<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
-									stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
-							</svg>
-						</span>
-						предложения апреля
-					</h2>
-					<div class="offer__swiper swiper">
-						<div class="offer__arrow-prev"></div>
-						<div class="offer__arrow-next"></div>
-						<div class="swiper-wrapper">
-							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-1.png" alt="">
-								<div class="offer__text">
-									<p class="offer__name">Скидка -50% на второй шаблон</p>
-									<a href="#" class="offer__btn">Подробнее</a>
-								</div>
-							</div>
-							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-2.png" alt="">
-								<div class="offer__text">
-									<p class="offer__name">Покупаете
-										2&nbsp;шаблона, третий в подарок</p>
-									<a href="#" class="offer__btn">Подробнее</a>
-								</div>
-							</div>
-							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-3.png" alt="">
-								<div class="offer__text">
-									<p class="offer__name">Купите подписку на 1 год и получайте любой шаблон бесплатно</p>
-									<a href="#" class="offer__btn">Подробнее</a>
-								</div>
-							</div>
-							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-1.png" alt="">
-								<div class="offer__text">
-									<p class="offer__name">Скидка -50% на второй шаблон</p>
-									<a href="#" class="offer__btn">Подробнее</a>
-								</div>
-							</div>
-						</div>
-						<div class="offer__pagination swiper-pagination"></div>
-					</div>
+				<div class="buy__img">
+					<img src="media/img/buy.jpg" alt="">
 				</div>
+
+				<article>
+					<h3 class="buy__article-title">Первоклассные конструкторы WordPress</h3>
+					<p class="buy__text">
+						Коллекция предоставляет широкий выбор любимых конструкторов WordPress. Здесь вы можете выбрать наиболее
+						удобный для вас вариант.
+						<a href="https://www.templatemonster.com/wordpress-elementor-themes/" class="buy__link"
+							target="_blank">Elementor</a> ,
+						<a href="https://www.templatemonster.com/wordpress-themes.php" class="buy__link"
+							target="_blank">KingComposer</a> ,
+						<a href="https://www.templatemonster.com/wpbakery-page-builder/" class="buy__link" target="_blank">WP
+							Bakery</a> ,
+						<a href="https://www.templatemonster.com/visual-composer-wordpress-themes/" class="buy__link"
+							target="_blank">Visual Composer</a> ,
+						<a href="https://www.templatemonster.com/category/gutenberg-compatible-wordpress-themes/" class="buy__link"
+							target="_blank">Gutenberg</a>
+						и многие другие
+						доступны в стильном дизайне. Это дает вам возможность настраивать макеты в соответствии с нишей вашего
+						бизнеса: простое изменение цвета, редактирование блоков перетаскиванием, загрузка медиаконтента и простое
+						администрирование блога.
+					</p>
+					<p class="buy__text">
+						Кроме того, темы имеют простую в навигации структуру, которая сразу привлекает внимание. Это поможет вам
+						заинтересовать клиента и легко провести его через полезную информацию, шаг за шагом показывая важные
+						моменты. Покупайте темы WordPress премиум-класса и наслаждайтесь плавным запуском сайта!
+					</p>
+				</article>
+				<article>
+					<h3 class="buy__article-title">Сделайте свой сайт на WordPress особенным</h3>
+					<p class="buy__text">
+						Чтобы подчеркнуть уникальность вашего сайта, вы можете использовать гибкие блоки для представления вашей
+						информации. В каждом конструкторе страниц доступно более сотни функций: настройка логотипов, навигации и
+						типографики, а также внесение изменений в слайдер, страницы блога, портфолио, нижние колонтитулы страниц и
+						т. д. Вы также можете использовать специальные шаблоны для таких целей, как темы портфолио WordPress .
+					</p>
+					<p class="buy__text">
+						Виджеты Elementor дают вам шанс сделать каждую страницу вашего ресурса выдающейся! Если вы хотите создать
+						интернет-магазин, вам могут пригодиться наши
+						<a href="https://www.templatemonster.com/wordpress-ecommerce-themes/" class="buy__link" target="_blank">темы
+							для интернет-магазина WordPress</a>.
+					</p>
+					<p class="buy__text">
+						Также следует сказать, что каждый макет веб-сайта может похвастаться набором мощных функций и виджетов, с
+						которыми легко работать. Вы можете начать с шаблонов с нужными вам функциями, такими как
+						<a href="https://www.templatemonster.com/parallax-wordpress-themes/" class="buy__link" target="_blank">
+							темы WordPress с параллаксом
+						</a> ,
+						а затем просмотреть их функции. Функция предварительного просмотра позволяет вам увидеть
+						изменения, выполненные в режиме реального времени.
+					</p>
+				</article>
 			</div>
 		</section>
 
-		<!-- доп.услуги -->
-		<section class="services">
-			<div class="container">
-				<div class="services__row flex">
-					<div class="services__text">
-						<div class="services__text-wrap">
-							<p class="services__overhead">Не хотите вникать?</p>
-							<h2 class="services__title">Все сделаем
-								сами за вас.
-							</h2>
-							<p class="services__subtitle section-title">
-								<span class="section-title__accent">
-									Дополнительные
-									<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
-											stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
-								</span><br>
-								услуги:
-							</p>
-						</div>
-					</div>
-					<ul class="services__list">
-						<li class="services__item services-item">
-							<picture>
-								<source srcset="media/img/services-1-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-1.png" alt="">
-							</picture>
-							<div class="services-item__content">
-								<p class="services-item__label">Рекомендуем</p>
-								<p class="services-item__title">
-									Установим на&nbsp;домен
-									и&nbsp;хостинг под ключ
-								</p>
-								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
-							</div>
-						</li>
-						<li class="services__item services-item">
-							<picture>
-								<source srcset="media/img/services-2-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-2.png" alt="">
-							</picture>
-							<div class="services-item__content">
-								<p class="services-item__label">Рекомендуем</p>
-								<p class="services-item__title">
-									Наполним ваш<br class="desktop">
-									сайт контентом
-								</p>
-								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
-							</div>
-						</li>
-						<li class="services__item services-item">
-							<picture>
-								<source srcset="media/img/services-3-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-3.png" alt="">
-							</picture>
-							<div class="services-item__content">
-								<p class="services-item__label">Рекомендуем</p>
-								<p class="services-item__title">
-									SEO-оптимизация вашего сайта
-								</p>
-								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
-							</div>
-						</li>
-						<li class="services__item services-item">
-							<picture>
-								<source srcset="media/img/services-4-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-4.png" alt="">
-							</picture>
-							<div class="services-item__content">
-								<p class="services-item__label">Рекомендуем</p>
-								<p class="services-item__title">
-									Установим и настроим аналитку на сайте
-								</p>
-								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
-							</div>
-						</li>
-						<li class="services__item services-item">
-							<picture>
-								<source srcset="media/img/services-5-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-5.png" alt="">
-							</picture>
-							<div class="services-item__content">
-								<p class="services-item__label">Рекомендуем</p>
-								<p class="services-item__title">
-									Настроим и запустим рекламу ЯндексДирект
-								</p>
-								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
-							</div>
-						</li>
-						<li class="services__item services-item">
-							<picture>
-								<source srcset="media/img/services-6-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-6.png" alt="">
-							</picture>
-							<div class="services-item__content">
-								<p class="services-item__label">Рекомендуем</p>
-								<p class="services-item__title">
-									12 месяцев
-									тех&nbsp;поддержки
-								</p>
-								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<!-- свой каталог -->
-		<section class="get">
-			<div class="container">
-				<div class="get__body">
-					<h2 class="get__title">Выберите свой идеальный
-						продающий сайт в каталоге</h2>
-					<a href="#" class="get__btn">Перейти в каталог</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- вопросы -->
-		<section class="question">
-			<div class="container">
-				<h2 class="question__title section-title">
-					Часто задаваемые
-					<span class="section-title__accent">
-						вопросы
-						<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
-								stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
-						</svg>
-					</span>
-				</h2>
-
-				<ul class="question__list">
-					<li class="question__item">
-						<p class="question__name">
-							Что такое конструктор сайтов?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-					<li class="question__item">
-						<p class="question__name">
-							Какой конструктор сайтов лучше использовать?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-					<li class="question__item">
-						<p class="question__name">
-							Как узнать, какой конструктор сайтов использовался для веб-сайта?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-					<li class="question__item">
-						<p class="question__name">
-							Какой конструктор сайтов лучше всего подходит для малого бизнеса?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-					<li class="question__item">
-						<p class="question__name">
-							Как создать сайт без конструктора сайтов?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-					<li class="question__item">
-						<p class="question__name">
-							Какой лучший конструктор сайтов для электронной коммерции?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-					<li class="question__item">
-						<p class="question__name">
-							Какой самы простой конструктор сайтов?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-					<li class="question__item">
-						<p class="question__name">
-							Какой конструктор сайтов предлагает хостинг?
-						</p>
-						<p class="question__text">
-							После оплаты вы получаете доступ в обучающую платформу, где есть видеоинструкция по установке на ваш
-							домен. Видеоинструкция по выгрузке на на ваш хостинг и подключению дома а также настрйоки SSL сертификата
-						</p>
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<!-- текст для сео -->
-		<section class="seo">
-			<div class="container">
-				<h2 class="seo__title section-title">Текст, который важен для
-					<span class="section-title__accent">
-						SEO
-						<svg viewBox="0 0 736 94" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M1 64.0577C102.041 78.5814 195.125 87.0065 353.777 90.3783C384.261 91.0253 414.791 89.636 445.094 87.5586C550.133 80.3586 628.601 82.2928 688.896 60.4809C889.498 -12.0868 151.221 -6.54811 65.4433 15.981C-1.36649 33.5285 1.84137 80.5143 289.497 91.1864C577.152 101.858 787.71 63.2168 723.365 33.3363C671.89 9.43197 353.606 7.42907 190.583 15.981"
-								stroke="#E11520" stroke-width="1.5" stroke-linecap="round" />
-						</svg>
-					</span>
-				</h2>
-			</div>
-			<div class="seo__wrap">
-				<p class="seo__text container">
-					Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-					velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est
-					sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
-					sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-					consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non
-					deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-					Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor
-					do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-					amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
-					enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
-					est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
-					consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-					officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-					Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-					velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est
-					sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
-					sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-					consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non
-					deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-					Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor
-					do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-					amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
-					enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
-					est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
-					consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-					officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-				</p>
-			</div>
-			<div class="container">
-				<button class="seo__btn-open">
-					<svg viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M15 1L8 8L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-					</svg>
-				</button>
-			</div>
-		</section>
 	</main>
 
 	<footer class="footer">
