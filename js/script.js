@@ -1,31 +1,35 @@
 // оптимизация загрузки
 var myScroll;
 function loaded() {
-	// myScroll = new IScroll('.main', {
-	// 	disablePointer: true,
-	// 	disableMouse: true,
-	// });
+	myScroll = new IScroll('.main', {
+		disablePointer: true,
+		disableMouse: true,
+	});
 }
+
+let AllImages = document.querySelectorAll("img");
+lazyload(AllImages);
 
 // всплывающие заголовки
 $(".section-title").each(anime);
-// $(".anim").each(anime);
 function anime() {
 	var thisTitle = $(this);
 	var accent = thisTitle.children('.section-title__accent');
 	var offsetTop = thisTitle.offset().top - $(window).height();
-	if ($(document).scrollTop() > offsetTop) {
+
+	if ($(document).scrollTop() > offsetTop + 50) {
 		// thisTitle.addClass('fade-in');
 		accent.addClass('active');
 	}
 	$(window).scroll(function (event) {
 		offsetTop = thisTitle.offset().top - $(window).height();
-		if ($(document).scrollTop() > offsetTop) {
+		if ($(document).scrollTop() > offsetTop + 50) {
 			// thisTitle.addClass('fade-in');
 			accent.addClass('active');
 		}
 	});
 }
+
 $('.section-title').not('h1').addClass('animation');
 
 // анимация подгрузки контента при скролле

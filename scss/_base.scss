@@ -1,0 +1,145 @@
+.base {
+	padding-bottom: 11.6vw;
+
+	&__content {
+		flex-wrap: wrap;
+		column-gap: 2.3vw;
+		row-gap: 3.23vw;
+		padding-bottom: 4.84vw;
+	}
+
+	&__item {
+		flex: 0 0 calc((100% / 4) - (2.3vw * 3 / 4));
+		display: flex;
+		flex-direction: column;
+		gap: 1.14vw;
+
+		&:hover {
+			cursor: pointer;
+
+			.base__name {
+				color: $accent-color;
+			}
+
+			.base__img,
+			.base__video {
+				box-shadow: 0 0 1.5vw #a0a0a0;
+			}
+
+			.base__play {
+				transform: translate(-50%, -50%) rotate(90deg) scale(1.1);
+			}
+		}
+	}
+
+	&__img {
+		position: relative;
+		height: 13.75vw;
+		border-radius: 1.04vw;
+		transition: box-shadow 0.3s ease-in-out;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			border-radius: 1.04vw;
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 1.25vw;
+		line-height: 142%;
+		text-decoration: underline;
+		color: $main-color;
+		transition: color 0.3s ease-in-out;
+	}
+
+	&__video {
+		position: relative;
+		border-radius: 1.04vw;
+		overflow: hidden;
+		transition: box-shadow 0.3s ease-in-out;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+		}
+	}
+
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 3.9vw;
+		height: 3.9vw;
+		transform: translate(-50%, -50%) rotate(90deg);
+		border-radius: 50%;
+		background-color: $accent-color;
+		transition: transform 0.3s ease-in-out;
+
+		img {
+			width: 0.52vw;
+		}
+	}
+
+	&__pagination {}
+}
+
+@media (max-width: 768px) {
+	.base {
+		padding-bottom: 8rem;
+
+		&__content {
+			flex-direction: column;
+			gap: 3rem;
+		}
+
+		&__item {
+			flex-basis: 100%;
+			gap: 1rem;
+		}
+
+		&__img {
+			height: 18.5rem;
+			border-radius: 1rem;
+
+			img {
+				border-radius: 1rem;
+			}
+		}
+
+		&__name {
+			font-weight: 900;
+			font-size: 1.6rem;
+		}
+
+		&__video {
+			border-radius: 1rem;
+		}
+
+		&__play {
+			width: 5rem;
+			height: 5rem;
+
+			img {
+				width: 0.8rem;
+			}
+		}
+	}
+}

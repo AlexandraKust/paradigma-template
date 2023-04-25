@@ -144,7 +144,7 @@ body {
 
 		&.active {
 			path {
-				animation: draw 1.5s ease-in 1.5s forwards;
+				animation: draw 1.4s ease-in 1s forwards;
 				animation-iteration-count: 1;
 			}
 		}
@@ -275,8 +275,8 @@ body {
 	&::after {
 		content: '';
 		position: relative;
-		width: 0.73vw;
-		height: 0.73vw;
+		width: 0.8vw;
+		height: 0.8vw;
 		background: url('../media/svg/arrow.svg') 0 0 / cover no-repeat;
 		transition: transform 0.5s ease-in-out;
 	}
@@ -429,7 +429,7 @@ body {
 			background-color: $accent-color;
 		}
 
-		&.active {
+		&:last-child {
 			font-weight: 700;
 			color: $main-color;
 		}
@@ -545,8 +545,10 @@ body {
 		line-height: 1.3rem;
 	}
 
+	.btn-more-link,
 	.btn-more {
 		gap: 0.9rem;
+		margin: 0 auto;
 		align-items: end;
 		font-size: 1.4rem;
 		line-height: 214%;

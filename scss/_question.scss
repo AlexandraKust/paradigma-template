@@ -26,6 +26,10 @@
 			.question__text {
 				padding-top: 0.5vw;
 			}
+
+			.question__name::before {
+				bottom: 0;
+			}
 		}
 	}
 
@@ -35,6 +39,14 @@
 		font-size: 1.5625vw;
 		line-height: 1.98vw;
 		transition: color 0.5s ease-in-out;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -2.67vw;
+			bottom: -2.67vw;
+			width: 100%;
+		}
 
 		&::after {
 			content: '+';

@@ -1,0 +1,27 @@
+.result {
+	padding-bottom: 6.7vw;
+
+	&__label {
+		margin-bottom: 2.76vw;
+		text-align: center;
+		font-weight: 500;
+		font-size: 1vw;
+		line-height: 1.3vw;
+	}
+
+	& .template-item:nth-child(n+4) {
+		display: block;
+	}
+}
+
+@media (max-width: 768px) {
+	.result {
+		padding-bottom: 8rem;
+
+		&__label {
+			margin-bottom: 2rem;
+			font-size: 1rem;
+			line-height: 1.3rem;
+		}
+	}
+}

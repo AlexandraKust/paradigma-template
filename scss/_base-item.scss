@@ -1,0 +1,177 @@
+.base-item {
+
+	&__row {
+		justify-content: space-between;
+		gap: 5.26vw;
+	}
+
+	&__sidebar {
+		flex: 0 0 27.6vw;
+	}
+}
+
+.article {
+	padding-bottom: 5.26vw;
+
+	.article-title {
+		margin-bottom: 1.46vw;
+	}
+
+	&__row {
+		gap: 2.5vw;
+		padding-top: 5.26vw;
+	}
+
+	&__img {
+		flex: 0 0 32.8125vw;
+		height: 26vw;
+		background-color: $accent-color;
+		border-radius: 1.04vw;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__list {
+		margin-bottom: 1.46vw;
+		padding-left: 1.2vw;
+		font-size: 0.9375vw;
+		line-height: 156%;
+
+		li {
+			list-style-type: disc;
+		}
+	}
+}
+
+h3.article-title {
+	font-size: 1.875vw;
+	line-height: 2.34vw;
+}
+
+.article-text {
+	font-weight: 400;
+	font-size: 0.9375vw;
+	line-height: 156%;
+	color: #333;
+
+	&:not(:last-of-type) {
+		margin-bottom: 1.3vw;
+	}
+
+	&:last-of-type {
+		margin-bottom: 2.2vw;
+	}
+}
+
+.article-link {
+	position: relative;
+	color: #333;
+	transition: color 0.3s ease-in-out;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -0.052vw;
+		left: 0;
+		width: 100%;
+		height: 0.052vw;
+		background-color: currentColor;
+	}
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+.sidebar {
+
+	&__title {
+		margin-bottom: 2.5vw;
+		font-weight: 900;
+		font-size: 1.875vw;
+		line-height: 128%;
+	}
+
+	&__btn {
+		display: block;
+		width: 100%;
+		padding: 1.3vw 2.6vw;
+		border-radius: 0.52vw;
+		background-color: $accent-color;
+		font-family: 'Cera Pro';
+		font-weight: 500;
+		font-size: 1.25vw;
+		line-height: 1.5625vw;
+		text-align: center;
+		color: #fff;
+	}
+
+	.template-item {
+		flex-basis: 100%;
+	}
+}
+
+
+.like {
+	padding-bottom: 3.33vw;
+
+	&__title {
+		margin-bottom: 3.33vw;
+		text-align: left;
+	}
+}
+
+@media (max-width: 768px) {
+	.article {
+		padding-bottom: 2rem;
+
+		.article-title {
+			margin-bottom: 2rem;
+		}
+
+		&__row {
+			flex-direction: column-reverse;
+			gap: 0;
+			padding-top: 2rem;
+		}
+
+		&__img {
+			flex-basis: auto;
+			height: 10rem;
+			border-radius: 1rem;
+		}
+
+		&__list {
+			margin-bottom: 1.5rem;
+			padding-left: 1.5rem;
+			font-size: 1rem;
+		}
+	}
+
+	h3.article-title {
+		font-size: 1.8rem;
+		line-height: 2rem;
+	}
+
+	.article-text {
+		font-size: 1rem;
+
+		&:not(:last-of-type) {
+			margin-bottom: 1.3rem;
+		}
+
+		&:last-of-type {
+			margin-bottom: 2.2rem;
+		}
+	}
+
+	.like {
+		padding-bottom: 10rem;
+	}
+}

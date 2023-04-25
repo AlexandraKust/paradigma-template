@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>База знаний</title>
+	<link rel="stylesheet" href="libs/custom-select.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+		integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body onload="loaded()">
+
+	<header class="header">
+		<div class="container">
+			<div class="header__row flex">
+				<a href="index.html" class="header__logo">
+					<img data-src="media/svg/logo.svg" alt="Paradigma template">
+				</a>
+				<nav class="header__nav nav">
+					<ul class="nav__list flex">
+						<li class="nav__item">
+							<a href="#" class="nav__link nav__link--arrow">Каталог шаблонов</a>
+							<ul class="nav__submenu submenu">
+								<li class="submenu__item"><a href="catalog-wp.html" class="submenu__link">На WordPress</a></li>
+								<li class="submenu__item"><a href="#" class="submenu__link">На OpenCart</a></li>
+							</ul>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link nav__link--arrow">Каталог лендингов</a>
+							<ul class="nav__submenu submenu">
+								<li class="submenu__item"><a href="#" class="submenu__link">Вариант 1</a></li>
+								<li class="submenu__item"><a href="#" class="submenu__link">Вариант 2</a></li>
+							</ul>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link nav__link--arrow">Каталог квиз-сайтов</a>
+							<ul class="nav__submenu submenu">
+								<li class="submenu__item"><a href="#" class="submenu__link">Вариант 1</a></li>
+								<li class="submenu__item"><a href="#" class="submenu__link">Вариант 2</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+						<li class="nav__item"><a href="warranty.html" class="nav__link">Гарантии</a></li>
+						<li class="nav__item"><a href="base.html" class="nav__link">База знаний</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__social social flex">
+					<a href="#" class="social__item social__item--telegram" aria-label="телеграм">
+						<img data-src="media/svg/telegram.svg" alt="иконка телеграма">
+					</a>
+					<a href="#" class="social__item social__item--whatsapp" aria-label="whatsapp">
+						<img data-src="media/svg/whatsapp.svg" alt="иконка whatsapp">
+					</a>
+					<div class="social__wrap">
+						<a href="tel:+79999999999" class="social__item social__item--phone">
+							<img data-src="media/svg/phone.svg" alt="иконка телефонной трубки">
+						</a>
+						<div class="social__hint">
+							<a href="tel:+79999999999">+7 (999) 999-99-99</a>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="header__login flex">
+					<span>Войти</span>
+					<svg viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M4.65991 6.10352C2.17785 6.1082 0.12457 8.07331 0.000569422 10.5567C-0.00273127 10.6272 0.0083434 10.6976 0.0331194 10.7636C0.0578954 10.8297 0.0958545 10.89 0.144686 10.9409C0.193518 10.9919 0.252201 11.0323 0.317164 11.0598C0.382127 11.0874 0.452011 11.1014 0.522562 11.101H8.81757C8.88778 11.1008 8.95722 11.0864 9.02171 11.0586C9.08619 11.0309 9.14439 10.9903 9.19279 10.9395C9.24118 10.8886 9.27878 10.8285 9.3033 10.7627C9.32783 10.6969 9.33878 10.6268 9.3355 10.5567C9.21134 8.07016 7.15325 6.10379 4.66804 6.10352H4.65991Z" />
+						<path
+							d="M4.66572 0.623047C3.35001 0.623047 2.27735 1.70075 2.27734 3.01793C2.27734 4.33511 3.35 5.41652 4.66572 5.41652C5.98145 5.41652 7.05782 4.33511 7.05781 3.01793C7.0578 1.70075 5.98144 0.623047 4.66572 0.623047Z" />
+					</svg>
+				</a>
+				<button class="header__burger mobile">
+					<svg viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M14.1287 2.09313H1.04657C0.470955 2.09313 0 1.62218 0 1.04657C0 0.470955 0.470955 0 1.04657 0H14.1287C14.7043 0 15.1752 0.470955 15.1752 1.04657C15.1752 1.62218 14.7043 2.09313 14.1287 2.09313Z" />
+						<path
+							d="M14.1287 12.7494H1.04657C0.470955 12.7494 0 12.2784 0 11.7028C0 11.1272 0.470955 10.6562 1.04657 10.6562H14.1287C14.7043 10.6562 15.1752 11.1272 15.1752 11.7028C15.1752 12.2784 14.7043 12.7494 14.1287 12.7494Z" />
+						<path
+							d="M14.1287 7.42126H1.04657C0.470955 7.42126 0 6.9503 0 6.37469C0 5.79908 0.470955 5.32812 1.04657 5.32812H14.1287C14.7043 5.32812 15.1752 5.79908 15.1752 6.37469C15.1752 6.9503 14.7043 7.42126 14.1287 7.42126Z" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__row flex">
+				<a href="index.html" class="breadcrumbs__item">Главная</a>
+				<a href="base.html" class="breadcrumbs__item">База знаний</a>
+			</div>
+		</div>
+	</div>
+
+	<section class="hero hero--base">
+		<div class="container-small">
+			<h1 class="hero__title section-title">
+				База знаний
+			</h1>
+
+		</div>
+		<div class="container">
+			<ul class="hero__tabs flex">
+				<li class="hero__tab active">Все</li>
+				<li class="hero__tab">Полезные статьи</li>
+				<li class="hero__tab">Доработки шаблона</li>
+				<li class="hero__tab">Видео инструкции</li>
+				<li class="hero__tab">Установка на хостинг</li>
+			</ul>
+		</div>
+	</section>
+
+	<main class="main">
+		<section class="base">
+			<div class="container">
+				<div class="base__content flex">
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__video">
+							<div class="base__play">
+								<img data-src="media/svg/triangle.svg" alt="">
+							</div>
+							<div class="base__img">
+								<img data-src="media/img/card-1.jpg" alt="">
+							</div>
+						</div>
+						<p class="base__name">ВИДЕО: Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__video">
+							<div class="base__play">
+								<img data-src="media/svg/triangle.svg" alt="">
+							</div>
+							<div class="base__img">
+								<img data-src="media/img/card-1.jpg" alt="">
+							</div>
+						</div>
+						<p class="base__name">ВИДЕО: Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__video">
+							<div class="base__play">
+								<img data-src="media/svg/triangle.svg" alt="">
+							</div>
+							<div class="base__img">
+								<img data-src="media/img/card-1.jpg" alt="">
+							</div>
+						</div>
+						<p class="base__name">ВИДЕО: Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__video">
+							<div class="base__play">
+								<img data-src="media/svg/triangle.svg" alt="">
+							</div>
+							<div class="base__img">
+								<img data-src="media/img/card-1.jpg" alt="">
+							</div>
+						</div>
+						<p class="base__name">ВИДЕО: Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__video">
+							<div class="base__play">
+								<img data-src="media/svg/triangle.svg" alt="">
+							</div>
+							<div class="base__img">
+								<img data-src="media/img/card-1.jpg" alt="">
+							</div>
+						</div>
+						<p class="base__name">ВИДЕО: Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+					<a href="#" class="base__item" target="_blank">
+						<div class="base__img">
+							<img data-src="media/img/card-1.jpg" alt="">
+						</div>
+						<p class="base__name">Как сделать сайт на WordPress самому и бесплатно</p>
+					</a>
+				</div>
+				<div class="base__pagination"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__nav flex">
+				<div class="footer__item">
+					<p class="footer__name">МАГАЗИН</p>
+					<ul class="footer__list">
+						<li class="footer__list-item"><a href="#" class="footer__link">Каталог шаблонов</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">Каталог лендингов</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">Каталог квиз-сайтов</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">Лицензия</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">Условия и положения</a></li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<p class="footer__name">ЗНАКОМСТВО С PARADIGMA</p>
+					<ul class="footer__list">
+						<li class="footer__list-item"><a href="services.html" class="footer__link">Услуги</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">О нашей компании</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">Другие проекты Paradigma</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">Вакансии</a></li>
+						<li class="footer__list-item"><a href="base.html" class="footer__link">База знаний</a></li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<p class="footer__name">ПОМОЩЬ</p>
+					<ul class="footer__list">
+						<li class="footer__list-item"><a href="#" class="footer__link">Центр поддержки</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__link">Присоединиться к Партнерской
+								Программе
+							</a></li>
+						<li class="footer__list-item"><a href="warranty.html" class="footer__link">Гарантии</a></li>
+					</ul>
+				</div>
+				<form action="#" class="footer__form">
+					<p class="footer__text">Присылать мне советы, бесплатные файлы, обновления и
+						спецпредложения.</p>
+					<div class="footer__fields flex">
+						<input type="text" class="footer__input input" placeholder="Электронная почта">
+						<button class="footer__btn">Подписаться</button>
+					</div>
+					<a href="#" target="_blank" class="footer__link">Политика конфиденциальности</a>
+				</form>
+			</div>
+			<div class="footer__data flex">
+				<a href="index.html" class="footer__logo">
+					<img data-src="media/svg/logo-2.svg" alt="Paradigma template logo">
+				</a>
+				<p class="footer__rights">Все права защищены. <br>Авторская разработка студи Paradigma.website</p>
+				<p class="footer__links">
+					<a href="#" target="_blank" class="footer__link">Договор публичной оферты</a>
+					<a href="#" target="_blank" class="footer__link">
+						Политика конфеденциальности данных
+					</a>
+				</p>
+
+				<a href="https://paradigma.website/" class="footer__autor">
+					Сделано с любовью
+					в Paradigma.website
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- кнопка прокрутки наверх -->
+	<button class="btn-top" aria-label="прокрутить страницу наверх">
+		<svg viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M7.05 0.6525L13.4927 7.31996C13.7762 7.61339 13.7779 8.07822 13.4965 8.3737C13.1983 8.68679 12.6995 8.6889 12.3987 8.37835L7.72134 3.54967C7.32723 3.14282 6.67421 3.14421 6.28184 3.55273L1.60097 8.42634C1.30073 8.73894 0.800371 8.73789 0.50145 8.42402C0.220916 8.12946 0.221746 7.66633 0.503332 7.37278L6.94981 0.65232C6.97716 0.623815 7.02276 0.623897 7.05 0.6525Z" />
+		</svg>
+	</button>
+
+	<!-- popup Оставить заявку -->
+	<div class="popup popup-request">
+		<div class="popup__body">
+			<div class="popup__close">
+				<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M9.99992 12.2528L2.481 19.9998L0 17.4436L7.51892 9.69651L0.589098 2.55644L3.07009 0.000175111L9.99992 7.14025L16.9299 0L19.4109 2.55627L12.4809 9.69651L20 17.4437L17.519 20L9.99992 12.2528Z" />
+				</svg>
+			</div>
+			<h3 class="popup__title">Оставить заявку</h3>
+
+			<div class="popup__service popup-service flex">
+				<p class="popup-service__name">Установка на
+					домен и хостинг</p>
+				<div class="popup-service__price flex">
+					<p class="popup-service__total"><span>4900</span> руб</p>
+					<!-- <p class="popup-service__old"><span>13 000</span> руб</p> -->
+				</div>
+			</div>
+
+			<p class="popup__descr">
+				После заполения формы вы будете перенаправлены на оплату. В течение 10 минут после
+				оплаты с&nbsp;вами свяжемся
+				и поможем с&nbsp;вашей задачей
+			</p>
+
+			<form action="#" method="POST" class="popup__form agree-form" data-form-validate-js>
+				<input type="hidden" name="formname" value="callback">
+				<input class="popup__input input" type="text" name="name" placeholder="Ваше имя" required>
+				<input class="popup__input input" type="tel" name="phone" placeholder="Ваше телефон">
+				<input class="popup__input input" type="email" name="mail" placeholder="Ваше e-mail" required>
+				<button class="popup__btn main-btn main-btn--red">
+					<span class="btn-blick"></span>
+					<span class="main-btn__text">Перейти к оплате</span>
+				</button>
+				<div class="popup__agree agree flex">
+					<div class="agree__checkbox"></div>
+					<p class="agree__text">
+						Согласен на обработку персональных данных
+					</p>
+				</div>
+				<div class="popup__agree agree flex">
+					<div class="agree__checkbox"></div>
+					<p class="agree__text">
+						Принимаю условия публичного договора оферты
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- popup Оформление заказа -->
+	<div class="popup popup-order ">
+		<div class="popup__body">
+			<div class="popup__close">
+				<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M9.99992 12.2528L2.481 19.9998L0 17.4436L7.51892 9.69651L0.589098 2.55644L3.07009 0.000175111L9.99992 7.14025L16.9299 0L19.4109 2.55627L12.4809 9.69651L20 17.4437L17.519 20L9.99992 12.2528Z" />
+				</svg>
+			</div>
+			<h3 class="popup__title">Оформление заказа</h3>
+
+			<div class="popup__service popup-service flex">
+				<p class="popup-service__name">Шаблон сайта Мебель, кухни, шкафы-купе</p>
+				<div class="popup-service__price flex">
+					<p class="popup-service__total"><span>4900</span> руб</p>
+					<p class="popup-service__old"><span>13 000</span> руб</p>
+				</div>
+			</div>
+
+			<p class="popup__descr">
+				После заполения формы вы будете перенаправлены на оплату. В течение 10 минут после
+				оплаты с вами свяжемся
+				и поможем с вашей задачей
+			</p>
+
+			<form action="#" method="POST" class="popup__form agree-form" data-form-validate-js>
+				<input type="hidden" name="formname" value="callback">
+				<input class="popup__input input" type="text" name="name" placeholder="Ваше имя" required>
+				<input class="popup__input input" type="tel" name="phone" placeholder="Ваше телефон">
+				<input class="popup__input input" type="email" name="mail" placeholder="Ваше e-mail" required>
+				<button class="popup__btn main-btn main-btn--red">
+					<span class="btn-blick"></span>
+					<span class="main-btn__text">Перейти к оплате</span>
+				</button>
+				<div class="popup__agree agree flex">
+					<div class="agree__checkbox"></div>
+					<p class="agree__text">
+						Согласен на обработку персональных данных
+					</p>
+				</div>
+				<div class="popup__agree agree flex">
+					<div class="agree__checkbox"></div>
+					<p class="agree__text">
+						Принимаю условия публичного договора оферты
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- popup Стойте -->
+	<div class="popup popup-wait">
+		<div class="popup__body">
+			<div class="popup__close">
+				<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M9.99992 12.2528L2.481 19.9998L0 17.4436L7.51892 9.69651L0.589098 2.55644L3.07009 0.000175111L9.99992 7.14025L16.9299 0L19.4109 2.55627L12.4809 9.69651L20 17.4437L17.519 20L9.99992 12.2528Z" />
+				</svg>
+			</div>
+			<h3 class="popup__title">ПОСТОЙТЕ!</h3>
+
+			<p class="popup__descr">
+				Если вы не нашли нужный шаблона сайта, у нас есть <span>конструктор без абонплаты</span>
+			</p>
+
+			<div class="popup__img">
+				<img data-src="media/img/popup-wait.jpg" alt="">
+				<img data-src="media/svg/arrow-2.svg" alt="">
+			</div>
+
+			<a href="#" class="popup__btn main-btn main-btn--red">
+				<span class="btn-blick"></span>
+				<span class="main-btn__text">
+					Посмотреть что<br>
+					за конструктор такой
+				</span>
+			</a>
+
+			<button class="popup__nothnx">Спасибо, не интересно</button>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+		integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+		integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+		integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="libs/jquery.cookie.js"></script>
+	<script src="libs/iscroll.js"></script>
+	<script src="libs/custom-select.min.js"></script>
+	<script src="libs/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+	<script src="js/script.js"></script>
+	<script>
+		$(document).mouseleave(function () {
+			if (event.clientY < 3) {
+				let leave = 1;
+				if (+$.cookie('leave-popup')) {
+					leave = 0;
+				}
+				if (leave) {
+					$('.popup-wait').addClass('active');
+					$.cookie('leave-popup', 1, { expires: 7 });
+				}
+			}
+		});
+	</script>
+
+</body>
+
+</html>

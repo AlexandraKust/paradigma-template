@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
 		integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body onload="loaded()">
@@ -20,14 +20,14 @@
 		<div class="container">
 			<div class="header__row flex">
 				<a href="index.html" class="header__logo">
-					<img src="media/svg/logo.svg" alt="Paradigma template">
+					<img data-src="media/svg/logo.svg" alt="Paradigma template">
 				</a>
 				<nav class="header__nav nav">
 					<ul class="nav__list flex">
 						<li class="nav__item">
 							<a href="#" class="nav__link nav__link--arrow">Каталог шаблонов</a>
 							<ul class="nav__submenu submenu">
-								<li class="submenu__item"><a href="#" class="submenu__link">На WordPress</a></li>
+								<li class="submenu__item"><a href="catalog-wp.html" class="submenu__link">На WordPress</a></li>
 								<li class="submenu__item"><a href="#" class="submenu__link">На OpenCart</a></li>
 							</ul>
 						</li>
@@ -45,22 +45,22 @@
 								<li class="submenu__item"><a href="#" class="submenu__link">Вариант 2</a></li>
 							</ul>
 						</li>
-						<li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Гарантии</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">База знаний</a></li>
+						<li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+						<li class="nav__item"><a href="warranty.html" class="nav__link">Гарантии</a></li>
+						<li class="nav__item"><a href="base.html" class="nav__link">База знаний</a></li>
 						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header__social social flex">
 					<a href="#" class="social__item social__item--telegram" aria-label="телеграм">
-						<img src="media/svg/telegram.svg" alt="иконка телеграма">
+						<img data-src="media/svg/telegram.svg" alt="иконка телеграма">
 					</a>
 					<a href="#" class="social__item social__item--whatsapp" aria-label="whatsapp">
-						<img src="media/svg/whatsapp.svg" alt="иконка whatsapp">
+						<img data-src="media/svg/whatsapp.svg" alt="иконка whatsapp">
 					</a>
 					<div class="social__wrap">
 						<a href="tel:+79999999999" class="social__item social__item--phone">
-							<img src="media/svg/phone.svg" alt="иконка телефонной трубки">
+							<img data-src="media/svg/phone.svg" alt="иконка телефонной трубки">
 						</a>
 						<div class="social__hint">
 							<a href="tel:+79999999999">+7 (999) 999-99-99</a>
@@ -133,12 +133,12 @@
 					</ul>
 				</div>
 				<button class="form-search__btn" aria-label="поиск">
-					<img src="media/svg/search.svg" alt="лупа">
+					<img data-src="media/svg/search.svg" alt="лупа">
 				</button>
 			</form>
 
 			<div class="hero__descr flex">
-				<img src="media/svg/heart.svg" alt="сердце" class="hero__descr-icon">
+				<img data-src="media/svg/heart.svg" alt="сердце" class="hero__descr-icon">
 				<p>Все шаблоны полностью на русском языке и с русской админ-панелью</p>
 			</div>
 		</div>
@@ -146,16 +146,16 @@
 			<div class="ticker__row flex">
 				<div class="ticker__wrap flex">
 					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-1.jpg" alt="картинка с шаблоном сайта">
+						<img loading="lazy" src="media/img/ticker-1.jpg" alt="картинка с шаблоном сайта">
 					</a>
 					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-2.jpg" alt="картинка с шаблоном сайта">
+						<img loading="lazy" src="media/img/ticker-2.jpg" alt="картинка с шаблоном сайта">
 					</a>
 					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-3.jpg" alt="картинка с шаблоном сайта">
+						<img loading="lazy" src="media/img/ticker-3.jpg" alt="картинка с шаблоном сайта">
 					</a>
 					<a href="#" class="ticker__item">
-						<img src="media/img/ticker-4.jpg" alt="картинка с шаблоном сайта">
+						<img loading="lazy" src="media/img/ticker-4.jpg" alt="картинка с шаблоном сайта">
 					</a>
 				</div>
 			</div>
@@ -283,7 +283,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-1-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-1.png" alt="">
+							<img class="content__img" data-src="media/img/content-1.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -295,11 +295,11 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-2-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-2.png" alt="">
+							<img class="content__img" data-src="media/img/content-2.png" alt="">
 						</picture>
 						<div class="content__play" aria-label="кнопка посмотреть видео">
 							<a href="#" data-fancybox="first-video"></a>
-							<img src="media/svg/play.svg" alt="">
+							<img data-src="media/svg/play.svg" alt="">
 						</div>
 					</li>
 					<li class="content__item">
@@ -309,7 +309,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-3-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-3.png" alt="">
+							<img class="content__img" data-src="media/img/content-3.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -319,7 +319,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-4-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-4.png" alt="">
+							<img class="content__img" data-src="media/img/content-4.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -332,7 +332,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-5-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-5.png" alt="">
+							<img class="content__img" data-src="media/img/content-5.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -344,7 +344,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-6-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-6.png" alt="">
+							<img class="content__img" data-src="media/img/content-6.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -354,7 +354,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-7-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-7.png" alt="">
+							<img class="content__img" data-src="media/img/content-7.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -364,11 +364,11 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-8-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-8.png" alt="">
+							<img class="content__img" data-src="media/img/content-8.png" alt="">
 						</picture>
 						<div class="content__play" aria-label="кнопка посмотреть видео">
 							<a href="#" data-fancybox="first-video"></a>
-							<img src="media/svg/play.svg" alt="">
+							<img data-src="media/svg/play.svg" alt="">
 						</div>
 					</li>
 					<li class="content__item">
@@ -379,7 +379,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-9-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-9.png" alt="">
+							<img class="content__img" data-src="media/img/content-9.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -389,7 +389,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-10-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-10.png" alt="">
+							<img class="content__img" data-src="media/img/content-10.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -399,7 +399,7 @@
 						</p>
 						<picture>
 							<source srcset="media/img/content-11-mobile.png" media="(max-width: 768px)">
-							<img class="content__img" src="media/img/content-11.png" alt="">
+							<img class="content__img" data-src="media/img/content-11.png" alt="">
 						</picture>
 					</li>
 					<li class="content__item">
@@ -438,7 +438,7 @@
 				<ul class="template__row flex">
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
+							<img data-src="media/img/card-1.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -481,7 +481,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
+							<img data-src="media/img/card-2.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -524,7 +524,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
+							<img data-src="media/img/card-3.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -567,7 +567,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
+							<img data-src="media/img/card-1.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -610,7 +610,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
+							<img data-src="media/img/card-2.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -653,7 +653,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
+							<img data-src="media/img/card-3.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -696,7 +696,7 @@
 					</li>
 				</ul>
 
-				<a href="#" class="template__more btn-more-link" target="_blank">
+				<a href="catalog.html" class="template__more btn-more-link" target="_blank">
 					<span>Смотреть больше шаблонов</span>
 				</a>
 			</div>
@@ -721,7 +721,7 @@
 				<ul class="template__row flex">
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
+							<img data-src="media/img/card-1.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -764,7 +764,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
+							<img data-src="media/img/card-2.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -807,7 +807,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
+							<img data-src="media/img/card-3.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -850,7 +850,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-1.jpg" alt="">
+							<img data-src="media/img/card-1.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -893,7 +893,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-2.jpg" alt="">
+							<img data-src="media/img/card-2.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -936,7 +936,7 @@
 					</li>
 					<li class="template__item template-item">
 						<div class="template-item__img">
-							<img src="media/img/card-3.jpg" alt="">
+							<img data-src="media/img/card-3.jpg" alt="">
 							<div class="template-item__labels flex">
 								<p class="template-item__label template-item__label-gray">Wordpress</p>
 								<p class="template-item__label template-item__label-pink">Хит</p>
@@ -979,7 +979,7 @@
 					</li>
 				</ul>
 
-				<a href="#" class="template__more btn-more-link" target="_blank">
+				<a href="catalog.html" class="template__more btn-more-link" target="_blank">
 					<span>Смотреть больше шаблонов</span>
 				</a>
 			</div>
@@ -1005,14 +1005,14 @@
 						<div class="offer__arrow-next"></div>
 						<div class="swiper-wrapper">
 							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-1.png" alt="">
+								<img class="offer__img" data-src="media/img/offer-1.png" alt="">
 								<div class="offer__text">
 									<p class="offer__name">Скидка -50% на второй шаблон</p>
 									<a href="#" class="offer__btn">Подробнее</a>
 								</div>
 							</div>
 							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-2.png" alt="">
+								<img class="offer__img" data-src="media/img/offer-2.png" alt="">
 								<div class="offer__text">
 									<p class="offer__name">Покупаете
 										2&nbsp;шаблона, третий в подарок</p>
@@ -1020,14 +1020,14 @@
 								</div>
 							</div>
 							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-3.png" alt="">
+								<img class="offer__img" data-src="media/img/offer-3.png" alt="">
 								<div class="offer__text">
 									<p class="offer__name">Купите подписку на 1 год и получайте любой шаблон бесплатно</p>
 									<a href="#" class="offer__btn">Подробнее</a>
 								</div>
 							</div>
 							<div class="swiper-slide offer__slide">
-								<img class="offer__img" src="media/img/offer-1.png" alt="">
+								<img class="offer__img" data-src="media/img/offer-1.png" alt="">
 								<div class="offer__text">
 									<p class="offer__name">Скидка -50% на второй шаблон</p>
 									<a href="#" class="offer__btn">Подробнее</a>
@@ -1067,7 +1067,7 @@
 						<li class="services__item services-item">
 							<picture>
 								<source srcset="media/img/services-1-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-1.png" alt="">
+								<img class="services-item__img" data-src="media/img/services-1.png" alt="">
 							</picture>
 							<div class="services-item__content">
 								<p class="services-item__label">Рекомендуем</p>
@@ -1076,13 +1076,13 @@
 									и&nbsp;хостинг под ключ
 								</p>
 								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
+								<a href="services-item.html" class="services-item__btn">Подробнее</a>
 							</div>
 						</li>
 						<li class="services__item services-item">
 							<picture>
 								<source srcset="media/img/services-2-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-2.png" alt="">
+								<img class="services-item__img" data-src="media/img/services-2.png" alt="">
 							</picture>
 							<div class="services-item__content">
 								<p class="services-item__label">Рекомендуем</p>
@@ -1091,13 +1091,13 @@
 									сайт контентом
 								</p>
 								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
+								<a href="services-item.html" class="services-item__btn">Подробнее</a>
 							</div>
 						</li>
 						<li class="services__item services-item">
 							<picture>
 								<source srcset="media/img/services-3-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-3.png" alt="">
+								<img class="services-item__img" data-src="media/img/services-3.png" alt="">
 							</picture>
 							<div class="services-item__content">
 								<p class="services-item__label">Рекомендуем</p>
@@ -1105,13 +1105,13 @@
 									SEO-оптимизация вашего сайта
 								</p>
 								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
+								<a href="services-item.html" class="services-item__btn">Подробнее</a>
 							</div>
 						</li>
 						<li class="services__item services-item">
 							<picture>
 								<source srcset="media/img/services-4-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-4.png" alt="">
+								<img class="services-item__img" data-src="media/img/services-4.png" alt="">
 							</picture>
 							<div class="services-item__content">
 								<p class="services-item__label">Рекомендуем</p>
@@ -1119,13 +1119,13 @@
 									Установим и настроим аналитку на сайте
 								</p>
 								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
+								<a href="services-item.html" class="services-item__btn">Подробнее</a>
 							</div>
 						</li>
 						<li class="services__item services-item">
 							<picture>
 								<source srcset="media/img/services-5-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-5.png" alt="">
+								<img class="services-item__img" data-src="media/img/services-5.png" alt="">
 							</picture>
 							<div class="services-item__content">
 								<p class="services-item__label">Рекомендуем</p>
@@ -1133,13 +1133,13 @@
 									Настроим и запустим рекламу ЯндексДирект
 								</p>
 								<p class="services-item__price"><span>4900</span> руб</p>
-								<a href="#" class="services-item__btn">Подробнее</a>
+								<a href="services-item.html" class="services-item__btn">Подробнее</a>
 							</div>
 						</li>
 						<li class="services__item services-item">
 							<picture>
 								<source srcset="media/img/services-6-mobile.png" media="(max-width: 768px)">
-								<img class="services-item__img" src="media/img/services-6.png" alt="">
+								<img class="services-item__img" data-src="media/img/services-6.png" alt="">
 							</picture>
 							<div class="services-item__content">
 								<p class="services-item__label">Рекомендуем</p>
@@ -1162,7 +1162,7 @@
 				<div class="get__body">
 					<h2 class="get__title">Выберите свой идеальный
 						продающий сайт в каталоге</h2>
-					<a href="#" class="get__btn">Перейти в каталог</a>
+					<a href="catalog.html" class="get__btn">Перейти в каталог</a>
 				</div>
 			</div>
 		</section>
@@ -1329,11 +1329,11 @@
 				<div class="footer__item">
 					<p class="footer__name">ЗНАКОМСТВО С PARADIGMA</p>
 					<ul class="footer__list">
-						<li class="footer__list-item"><a href="#" class="footer__link">Услуги</a></li>
+						<li class="footer__list-item"><a href="services.html" class="footer__link">Услуги</a></li>
 						<li class="footer__list-item"><a href="#" class="footer__link">О нашей компании</a></li>
 						<li class="footer__list-item"><a href="#" class="footer__link">Другие проекты Paradigma</a></li>
 						<li class="footer__list-item"><a href="#" class="footer__link">Вакансии</a></li>
-						<li class="footer__list-item"><a href="#" class="footer__link">База знаний</a></li>
+						<li class="footer__list-item"><a href="base.html" class="footer__link">База знаний</a></li>
 					</ul>
 				</div>
 				<div class="footer__item">
@@ -1343,7 +1343,7 @@
 						<li class="footer__list-item"><a href="#" class="footer__link">Присоединиться к Партнерской
 								Программе
 							</a></li>
-						<li class="footer__list-item"><a href="#" class="footer__link">Гарантии</a></li>
+						<li class="footer__list-item"><a href="warranty.html" class="footer__link">Гарантии</a></li>
 					</ul>
 				</div>
 				<form action="#" class="footer__form">
@@ -1358,7 +1358,7 @@
 			</div>
 			<div class="footer__data flex">
 				<a href="index.html" class="footer__logo">
-					<img src="media/svg/logo-2.svg" alt="Paradigma template logo">
+					<img data-src="media/svg/logo-2.svg" alt="Paradigma template logo">
 				</a>
 				<p class="footer__rights">Все права защищены. <br>Авторская разработка студи Paradigma.website</p>
 				<p class="footer__links">
@@ -1501,8 +1501,8 @@
 			</p>
 
 			<div class="popup__img">
-				<img src="media/img/popup-wait.jpg" alt="">
-				<img src="media/svg/arrow-2.svg" alt="">
+				<img data-src="media/img/popup-wait.jpg" alt="">
+				<img data-src="media/svg/arrow-2.svg" alt="">
 			</div>
 
 			<a href="#" class="popup__btn main-btn main-btn--red">
@@ -1531,6 +1531,7 @@
 	<script src="libs/iscroll.js"></script>
 	<script src="libs/custom-select.min.js"></script>
 	<script src="libs/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
 	<script src="js/script.js"></script>
 	<script>
