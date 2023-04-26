@@ -1,11 +1,11 @@
 // оптимизация загрузки
-var myScroll;
-function loaded() {
-	myScroll = new IScroll('.main', {
-		disablePointer: true,
-		disableMouse: true,
-	});
-}
+// var myScroll;
+// function loaded() {
+// 	myScroll = new IScroll('.main', {
+// 		disablePointer: true,
+// 		disableMouse: true,
+// 	});
+// }
 
 let AllImages = document.querySelectorAll("img");
 lazyload(AllImages);
