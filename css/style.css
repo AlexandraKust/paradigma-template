@@ -1330,6 +1330,7 @@ body.lock {
 }
 .hero__title {
   margin-bottom: 2.08vw;
+  letter-spacing: 0;
 }
 .hero__subtitle {
   margin-bottom: 2.08vw;
