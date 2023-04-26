@@ -120,6 +120,13 @@
 		.services-item__btn {
 			background-color: #fff;
 			color: #1e211e;
+			transition-property: color, background;
+			transition: 0.3s ease-in-out;
+
+			&:hover {
+				color: $accent-color;
+				background: darken($color: #fff, $amount: 10%);
+			}
 		}
 	}
 
@@ -247,6 +254,12 @@
 		line-height: 1.5625vw;
 		text-align: center;
 		color: #fff;
+		transition: background 0.3s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			background: darken($color: $accent-color, $amount: 7%);
+		}
 	}
 
 	&__img {

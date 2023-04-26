@@ -2963,6 +2963,16 @@ body.lock {
 .services-item:nth-child(3n) .services-item__btn {
   background-color: #fff;
   color: #1e211e;
+  -webkit-transition-property: color, background;
+  -o-transition-property: color, background;
+  transition-property: color, background;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.services-item:nth-child(3n) .services-item__btn:hover {
+  color: #D51228;
+  background: #e6e6e6;
 }
 .services-item:nth-child(3) {
   background-color: #D51228;
@@ -3085,6 +3095,13 @@ body.lock {
   line-height: 1.5625vw;
   text-align: center;
   color: #fff;
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.services-buy__btn:hover {
+  cursor: pointer;
+  background: #b40f22;
 }
 .services-buy__img {
   width: 100%;
