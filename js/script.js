@@ -1,14 +1,5 @@
-// оптимизация загрузки
-// var myScroll;
-// function loaded() {
-// 	myScroll = new IScroll('.main', {
-// 		disablePointer: true,
-// 		disableMouse: true,
-// 	});
-// }
-
-let AllImages = document.querySelectorAll("img");
-lazyload(AllImages);
+// let AllImages = document.querySelectorAll("img");
+lazyload($('img[data-src]'));
 
 // всплывающие заголовки
 $(".section-title").each(anime);
@@ -30,7 +21,8 @@ function anime() {
 	});
 }
 
-$('.section-title').not('h1').addClass('animation');
+$('.section-title').not('h1').not('.no-anim').addClass('animation');
+$('h1.section-title').not('.animation').addClass('fade-in');
 
 // анимация подгрузки контента при скролле
 $(window).on('scroll', function () {
@@ -528,3 +520,16 @@ if (calcForm) {
 		})
 	})
 }
+
+$(document).mouseleave(function () {
+	if (event.clientY < 3) {
+		let leave = 1;
+		if (+$.cookie('leave-popup')) {
+			leave = 0;
+		}
+		if (leave) {
+			$('.popup-wait').addClass('active');
+			$.cookie('leave-popup', 1, { expires: 7 });
+		}
+	}
+});

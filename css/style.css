@@ -1704,10 +1704,6 @@ body.lock {
   -webkit-animation: ticker linear infinite;
           animation: ticker linear infinite;
 }
-.ticker__row:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
 .ticker__wrap {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -1904,9 +1900,9 @@ body.lock {
 .why__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 3.2vw;
-     -moz-column-gap: 3.2vw;
-          column-gap: 3.2vw;
+  -webkit-column-gap: 3.19vw;
+     -moz-column-gap: 3.19vw;
+          column-gap: 3.19vw;
   row-gap: 2.1875vw;
 }
 .why__item {
@@ -2026,9 +2022,9 @@ body.lock {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 2.86vw;
-  -webkit-column-gap: 3.2vw;
-     -moz-column-gap: 3.2vw;
-          column-gap: 3.2vw;
+  -webkit-column-gap: 3.19vw;
+     -moz-column-gap: 3.19vw;
+          column-gap: 3.19vw;
 }
 .content__item {
   position: relative;
@@ -2235,9 +2231,9 @@ body.lock {
 .template__row {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 3.6vw;
-     -moz-column-gap: 3.6vw;
-          column-gap: 3.6vw;
+  -webkit-column-gap: 3.59vw;
+     -moz-column-gap: 3.59vw;
+          column-gap: 3.59vw;
   row-gap: 2.86vw;
   margin-bottom: 3.75vw;
 }

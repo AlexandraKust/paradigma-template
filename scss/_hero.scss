@@ -364,10 +364,6 @@
 	&__row {
 		width: max-content;
 		animation: ticker linear infinite;
-
-		&:hover {
-			animation-play-state: paused;
-		}
 	}
 
 	&__wrap {

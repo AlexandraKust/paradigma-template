@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body onload="loaded()">
+<body>
 
 	<header class="header">
 		<div class="container">
@@ -385,27 +385,11 @@
 		integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="libs/jquery.cookie.js"></script>
-	<script src="libs/iscroll.js"></script>
 	<script src="libs/custom-select.min.js"></script>
 	<script src="libs/jquery.validate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
 	<script src="js/script.js"></script>
-	<script>
-		$(document).mouseleave(function () {
-			if (event.clientY < 3) {
-				let leave = 1;
-				if (+$.cookie('leave-popup')) {
-					leave = 0;
-				}
-				if (leave) {
-					$('.popup-wait').addClass('active');
-					$.cookie('leave-popup', 1, { expires: 7 });
-				}
-			}
-		});
-	</script>
-
 </body>
 
 </html>
