@@ -5075,9 +5075,9 @@ body.lock {
 .base__content {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 2.3vw;
-     -moz-column-gap: 2.3vw;
-          column-gap: 2.3vw;
+  -webkit-column-gap: 2.29vw;
+     -moz-column-gap: 2.29vw;
+          column-gap: 2.29vw;
   row-gap: 3.23vw;
   padding-bottom: 4.84vw;
 }
