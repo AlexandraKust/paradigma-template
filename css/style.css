@@ -1998,6 +1998,7 @@ body.lock {
   .ticker__item {
     -ms-flex-preferred-size: 12.2rem;
         flex-basis: 12.2rem;
+    width: 12.2rem;
     height: 6.9rem;
     border-radius: 1rem;
     margin-right: 1rem;
@@ -4496,8 +4497,8 @@ body.lock {
   font-weight: 400;
   top: -0.3vw;
   left: auto;
-  right: -5.21vw;
-  width: 10.42vw;
+  right: -8.5vw;
+  width: 17vw;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);

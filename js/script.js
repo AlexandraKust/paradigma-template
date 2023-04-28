@@ -1,4 +1,3 @@
-// let AllImages = document.querySelectorAll("img");
 lazyload($('img[data-src]'));
 
 // всплывающие заголовки
@@ -9,24 +8,20 @@ function anime() {
 	var offsetTop = thisTitle.offset().top - $(window).height();
 
 	if ($(document).scrollTop() > offsetTop + 50) {
-		// thisTitle.addClass('fade-in');
 		accent.addClass('active');
 	}
 	$(window).scroll(function (event) {
 		offsetTop = thisTitle.offset().top - $(window).height();
 		if ($(document).scrollTop() > offsetTop + 50) {
-			// thisTitle.addClass('fade-in');
 			accent.addClass('active');
 		}
 	});
 }
 
-// $('.section-title').not('.no-anim').addClass('animation');
-// $('h1.section-title').not('.animation').addClass('fade-in');
 $('.section-title').not('h1').not('.no-anim').addClass('animation');
 setTimeout(function () {
 	$('h1.section-title').addClass('visible');
-}, 700)
+}, 500)
 
 // анимация подгрузки контента при скролле
 $(window).on('scroll', function () {
@@ -152,8 +147,6 @@ burger.addEventListener('click', function () {
 
 })
 
-
-
 // popup
 let requestPopup = document.querySelector('.popup-request');
 let openRequestPopup = document.querySelectorAll('.request-open');
@@ -250,8 +243,6 @@ if (btnUp) {
 	})
 }
 
-
-
 // маска на телефон
 $("input[type='tel']").mask('+7(999)999-99-99');
 jQuery.validator.addMethod("checkMaskPhone", function (value, element) {
@@ -285,7 +276,7 @@ $('[data-form-validate-js]').each(function () {
 				url: action,
 				data: data,
 				success: function (response) {
-					window.location.href = "thanks.html";
+					// window.location.href = "thanks.html";
 				},
 				error: function (response) {
 					window.location.href = "404.html";
@@ -294,80 +285,6 @@ $('[data-form-validate-js]').each(function () {
 		},
 	});
 });
-
-$('[data-download-form-js]').each(function () {
-	var form = $(this);
-
-	form.validate({
-		errorClass: "validate_error",
-		rules: {
-			phone: {
-				required: true,
-				checkMaskPhone: true
-			}
-		},
-		errorPlacement: function (error, element) { },
-		submitHandler: function () {
-			var data = form.serialize();
-			var action = form.attr('action');
-			var method = form.attr('method');
-			var link = document.createElement('a');
-			var file = form.attr('data-download-form-js');
-
-			link.setAttribute('href', file);
-			link.setAttribute('download', '');
-
-			$.ajax({
-				type: method,
-				url: action,
-				data: data,
-				success: function (response) {
-					window.location.href = "thanks.html";
-					link.click();
-				},
-				error: function (response) {
-					window.location.href = "404.html";
-				},
-			});
-		},
-	});
-});
-
-
-// плавная прокрутка
-$("[data-anchor-btn-js]").on("click", function (event) {
-	event.preventDefault();
-	var headerHeight = $('header').height();
-
-	var target = $(this).attr('href');
-
-	if ($(target).length) {
-		if (window.innerWidth > 768) {
-			var offset = ($(target).offset().top) - 50;
-		} else {
-			var offset = ($(target).offset().top) - headerHeight + 40;
-		}
-
-		let scroll = $(window).scrollTop();
-		let windowHeight = $(window).height();
-
-		if (offset > scroll) {
-			var time = Math.round(offset / windowHeight) * 1000;
-		} else {
-			var time = Math.round((scroll - offset) / windowHeight) * 300;
-		}
-
-		$('body,html').animate({
-			scrollTop: offset
-		}, time);
-	} else {
-		window.location.href = "index.html";
-	}
-});
-
-
-
-
 
 // accordion
 let accordionItem = document.querySelectorAll('.accordion__item');
@@ -430,7 +347,6 @@ if (seo) {
 		seoBtn.classList.toggle('active');
 	})
 }
-
 
 // tabs
 $('.hero__tab').click(function () {

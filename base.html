@@ -8,9 +8,7 @@
 	<title>База знаний</title>
 	<link rel="stylesheet" href="libs/custom-select.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-		integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -20,7 +18,7 @@
 		<div class="container">
 			<div class="header__row flex">
 				<a href="index.html" class="header__logo">
-					<img data-src="media/svg/logo.svg" alt="Paradigma template">
+					<img src="media/svg/logo.svg" alt="">
 				</a>
 				<nav class="header__nav nav">
 					<ul class="nav__list flex">
@@ -52,15 +50,18 @@
 					</ul>
 				</nav>
 				<div class="header__social social flex">
+					<a href="search.html" class="social__item social__item--search" aria-label="поиск">
+						<img src="media/svg/search.svg" alt="">
+					</a>
 					<a href="#" class="social__item social__item--telegram" aria-label="телеграм">
-						<img data-src="media/svg/telegram.svg" alt="иконка телеграма">
+						<img src="media/svg/telegram.svg" alt="">
 					</a>
 					<a href="#" class="social__item social__item--whatsapp" aria-label="whatsapp">
-						<img data-src="media/svg/whatsapp.svg" alt="иконка whatsapp">
+						<img src="media/svg/whatsapp.svg" alt="">
 					</a>
 					<div class="social__wrap">
 						<a href="tel:+79999999999" class="social__item social__item--phone">
-							<img data-src="media/svg/phone.svg" alt="иконка телефонной трубки">
+							<img src="media/svg/phone.svg" alt="">
 						</a>
 						<div class="social__hint">
 							<a href="tel:+79999999999">+7 (999) 999-99-99</a>
@@ -68,7 +69,7 @@
 					</div>
 				</div>
 				<a href="#" class="header__login flex">
-					<span>Войти</span>
+					<span class="desktop">Войти</span>
 					<svg viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M4.65991 6.10352C2.17785 6.1082 0.12457 8.07331 0.000569422 10.5567C-0.00273127 10.6272 0.0083434 10.6976 0.0331194 10.7636C0.0578954 10.8297 0.0958545 10.89 0.144686 10.9409C0.193518 10.9919 0.252201 11.0323 0.317164 11.0598C0.382127 11.0874 0.452011 11.1014 0.522562 11.101H8.81757C8.88778 11.1008 8.95722 11.0864 9.02171 11.0586C9.08619 11.0309 9.14439 10.9903 9.19279 10.9395C9.24118 10.8886 9.27878 10.8285 9.3033 10.7627C9.32783 10.6969 9.33878 10.6268 9.3355 10.5567C9.21134 8.07016 7.15325 6.10379 4.66804 6.10352H4.65991Z" />
@@ -739,19 +740,14 @@
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"
-		integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
-		integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
-		integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="libs/jquery-3.6.4.min.js"></script>
+	<script src="libs/jquery.fancybox.min.js"></script>
+	<script src="libs/jquery.maskedinput.min.js"></script>
 	<script src="libs/jquery.cookie.min.js"></script>
 	<script src="libs/custom-select.min.js"></script>
 	<script src="libs/jquery.validate.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+	<script src="libs/lazyload.min.js"></script>
+	<script src="libs/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 
