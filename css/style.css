@@ -1807,27 +1807,25 @@ body.lock {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
   -webkit-animation: ticker linear infinite;
           animation: ticker linear infinite;
 }
 .ticker__wrap {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 fit-content;
-          flex: 0 0 fit-content;
+      -ms-flex: 0 0 min-content;
+          flex: 0 0 min-content;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 .ticker__item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 27.34375vw;
           flex: 0 0 27.34375vw;
+  width: 27.34375vw;
   height: 15.36vw;
   border-radius: 1.3vw;
   overflow: hidden;
