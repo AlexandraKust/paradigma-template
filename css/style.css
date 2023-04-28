@@ -1807,6 +1807,9 @@ body.lock {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   -webkit-animation: ticker linear infinite;
           animation: ticker linear infinite;
 }
@@ -1814,6 +1817,12 @@ body.lock {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 fit-content;
           flex: 0 0 fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .ticker__item {
   -webkit-box-flex: 0;
