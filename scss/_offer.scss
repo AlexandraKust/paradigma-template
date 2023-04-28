@@ -96,6 +96,11 @@
 		line-height: 1vw;
 		text-align: center;
 		color: #fff;
+		transition: background 0.3s ease-in-out;
+
+		&:hover {
+			background: darken($color: $accent-color, $amount: 7%);
+		}
 	}
 
 	&__arrow-prev,

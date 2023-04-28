@@ -21,8 +21,12 @@ function anime() {
 	});
 }
 
+// $('.section-title').not('.no-anim').addClass('animation');
+// $('h1.section-title').not('.animation').addClass('fade-in');
 $('.section-title').not('h1').not('.no-anim').addClass('animation');
-$('h1.section-title').not('.animation').addClass('fade-in');
+setTimeout(function () {
+	$('h1.section-title').addClass('visible');
+}, 700)
 
 // анимация подгрузки контента при скролле
 $(window).on('scroll', function () {
@@ -96,7 +100,7 @@ function search() {
 let tickerRow = document.querySelector('.ticker__row');
 if (tickerRow) {
 	let tickerLength = tickerRow.querySelectorAll('.ticker__item').length;
-	tickerRow.style.animationDuration = tickerLength * 4 + 's';
+	tickerRow.style.animationDuration = tickerLength * 8 + 's';
 
 	let ticker = tickerRow.querySelector('.ticker__wrap');
 	let tickerDouble = ticker.cloneNode(true);
@@ -152,22 +156,28 @@ burger.addEventListener('click', function () {
 
 // popup
 let requestPopup = document.querySelector('.popup-request');
-// let openRequestPopup = document.querySelectorAll('.callback-popup');
+let openRequestPopup = document.querySelectorAll('.request-open');
 
-// let mapPopup = document.querySelector('.popup-map');
-// let openMapPopup = document.querySelector('.header__address-link');
+let confPopup = document.querySelector('.popup-conf');
+let openConfPopup = document.querySelectorAll('.conf');
 
-// let confPopup = document.querySelector('.popup-conf');
-// let openConfPopup = document.querySelectorAll('.conf');
+let orderPopup = document.querySelector('.popup-order');
+let openOrderPopup = document.querySelectorAll('.order-open');
 
-// открытие формы звонка
-// openRequestPopup.forEach(function (item) {
-// 	item.addEventListener('click', function () {
-// 		requestPopup.classList.add('active');
-// 		document.body.classList.add('lock');
-// 	});
-// })
+// открытие popup
+openPopup(openConfPopup, confPopup);
+openPopup(openOrderPopup, orderPopup);
+openPopup(openRequestPopup, requestPopup);
 
+function openPopup(btnOpen, popup) {
+	btnOpen.forEach(function (item) {
+		item.addEventListener('click', function (e) {
+			e.preventDefault();
+			popup.classList.add('active');
+			document.body.classList.add('lock');
+		});
+	})
+}
 
 // закрытие popup
 let popups = document.querySelectorAll('.popup');
@@ -175,6 +185,11 @@ popups.forEach(function (popup) {
 	let body = popup.querySelector(".popup__body");
 	let close = popup.querySelector(".popup__close");
 	let nothnx = popup.querySelector(".popup__nothnx");
+
+	popup.addEventListener('click', (e) => {
+		const withinBoundaries = e.composedPath().includes(body);
+		if (!withinBoundaries) closePopup(popup);
+	})
 
 	close.addEventListener('click', function () {
 		closePopup(popup)
@@ -184,12 +199,8 @@ popups.forEach(function (popup) {
 		nothnx.addEventListener('click', function () {
 			closePopup(popup)
 		});
-	}
+	};
 
-	document.addEventListener('click', (e) => {
-		const withinBoundaries = e.composedPath().includes(body);
-		if (!withinBoundaries) closePopup(popup);
-	})
 })
 
 function closePopup(popup) {

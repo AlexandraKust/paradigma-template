@@ -216,6 +216,24 @@
 	}
 }
 
+.popup-conf {
+	align-items: start;
+
+	.popup__body {
+		width: 60vw;
+		margin: auto;
+		overflow-y: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		font-size: 1vw;
+		line-height: 125%;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	.popup {
 
@@ -288,6 +306,13 @@
 			&::after {
 				height: 0.1rem;
 			}
+		}
+	}
+
+	.popup-conf {
+		.popup__body {
+			width: 80%;
+			font-size: 1rem;
 		}
 	}
 

@@ -31,13 +31,13 @@ body {
 
 @keyframes slide-up-in {
 	0% {
-		transform: translate(0, 100%);
+		transform: translateY(6vw);
 		opacity: 0;
 	}
 
 	100% {
 		opacity: 1;
-		transform: translate(0, 0);
+		transform: translateY(0);
 	}
 }
 
@@ -54,6 +54,16 @@ body {
 
 	100% {
 		transform: translateX(-50%);
+	}
+}
+
+@keyframes radial-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba($color: $accent-color, $alpha: 0.5);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0.5vw rgba(207, 241, 207, 0);
 	}
 }
 
@@ -92,6 +102,19 @@ body {
 
 .mobile {
 	display: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	.main {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .main {
@@ -303,7 +326,7 @@ body {
 	background-color: #fff;
 	font-family: 'Cera Pro';
 	font-weight: 500;
-	font-size: 0.833vw;
+	font-size: 1vw;
 	line-height: 156%;
 	color: $main-color;
 
@@ -409,6 +432,13 @@ body {
 		align-items: center;
 		justify-content: center;
 		gap: 1vw;
+		overflow-x: scroll;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 
 	&__item {
@@ -439,7 +469,7 @@ body {
 // всплывающая подсказка
 .hint {
 	position: relative;
-	top: 0.35vw;
+	top: 0.15vw;
 	width: fit-content;
 	z-index: 10;
 
@@ -447,6 +477,7 @@ body {
 		.hint__icon {
 			cursor: pointer;
 			background-color: #626262;
+			animation: none;
 
 			path {
 				fill: #fff;
@@ -460,22 +491,23 @@ body {
 	}
 
 	&__icon {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 0.52vw;
-		height: 0.52vw;
+		width: 0.8vw;
+		height: 0.8vw;
 		border-radius: 50%;
-		background: #f1f1f1;
+		background: $accent-color;
 		transition: background-color 0.3s ease-in-out;
+		animation: radial-pulse 1.8s infinite;
 
 		svg {
-			width: 0.1vw;
-			height: 0.2vw;
+			width: 0.18vw;
 		}
 
 		path {
-			fill: #979797;
+			fill: #fff;
 			transition: fill 0.3s ease-in-out;
 		}
 	}
@@ -485,12 +517,12 @@ body {
 		top: 0;
 		left: 1vw;
 		z-index: 10;
-		width: 10vw;
+		width: 15vw;
 		padding: 0.36vw 0.78125vw;
 		border-radius: 0.52vw;
 		background-color: #F9F9F9;
-		font-size: 0.41vw;
-		line-height: 0.52vw;
+		font-size: 0.9vw;
+		line-height: 125%;
 		text-align: center;
 		color: #000;
 		transform: translateY(-50%);
@@ -503,6 +535,16 @@ body {
 @media (max-width: 768px) {
 	html {
 		font-size: 3.125vw;
+	}
+
+	@keyframes radial-pulse {
+		0% {
+			box-shadow: 0 0 0 0 rgba($color: $accent-color, $alpha: 0.5);
+		}
+
+		100% {
+			box-shadow: 0 0 0 0.5rem rgba(207, 241, 207, 0);
+		}
 	}
 
 	.desktop {
@@ -529,7 +571,7 @@ body {
 		&__row {
 			position: relative;
 			flex-direction: column-reverse;
-			padding-top: 32.4rem;
+			padding-top: 33.4rem;
 		}
 
 		&__about,
@@ -600,7 +642,6 @@ body {
 		&__row {
 			width: fit-content;
 			margin: 0 auto;
-			flex-wrap: wrap;
 			justify-content: start;
 			column-gap: 2rem;
 			row-gap: 0.1rem;
@@ -631,27 +672,26 @@ body {
 	}
 
 	.hint {
-		top: 0.3rem;
+		top: 0.1rem;
 
 		&__icon {
-			width: 1rem;
-			height: 1rem;
+			width: 1.5rem;
+			height: 1.5rem;
 
 			svg {
-				width: 0.2rem;
-				height: 0.4rem;
+				width: 0.3rem;
 			}
 		}
 
 		&__text {
-			top: 0;
-			left: 1vw;
-			width: 10rem;
+			top: -0.7rem;
+			left: -7.5rem;
+			width: 18rem;
 			padding: 0.8rem 0.9rem;
 			border-radius: 1rem;
-			font-size: 0.7rem;
-			line-height: 0.9rem;
-			transform: translateY(-50%);
+			font-size: 1rem;
+			line-height: 125%;
+			transform: translateY(-100%);
 		}
 	}
 }

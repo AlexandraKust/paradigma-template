@@ -71,8 +71,8 @@
 		padding: 0.52vw 1.3vw;
 		border-radius: 26vw;
 		font-weight: 500;
-		font-size: 0.52vw;
-		line-height: 0.677vw;
+		font-size: 1vw;
+		line-height: 125%;
 		color: #fff;
 		background-color: #12C868;
 
@@ -80,8 +80,8 @@
 			content: '';
 			position: relative;
 			left: 0;
-			width: 0.42vw;
-			height: 0.3125vw;
+			width: 0.8vw;
+			height: 0.7vw;
 			margin-right: 0.26vw;
 			background: url('../media/svg/check.svg') 0 0 / 100% auto no-repeat;
 		}
@@ -213,6 +213,8 @@
 	background-color: #fff;
 
 	&__select {
+		display: flex;
+		align-items: center;
 		font-family: 'Cera Pro';
 		font-weight: 500;
 		font-size: 0.9375vw;
@@ -305,6 +307,8 @@
 
 	&__input {
 		border-radius: 0;
+		font-size: 1.2vw;
+		line-height: 125%;
 	}
 
 	&__list {
@@ -430,12 +434,11 @@
 		&__label {
 			padding: 0.3rem 0.8rem;
 			border-radius: 50rem;
-			font-size: 0.6rem;
-			line-height: 0.8rem;
+			font-size: 1rem;
 
 			&::before {
-				width: 0.4rem;
-				height: 0.3rem;
+				width: 0.6rem;
+				height: 0.5rem;
 				margin-right: 0.5rem;
 			}
 		}
@@ -541,7 +544,7 @@
 		}
 
 		&__input {
-			font-size: 0.8rem;
+			font-size: 1rem;
 			line-height: 1rem;
 			padding: 2rem 0.9rem;
 		}

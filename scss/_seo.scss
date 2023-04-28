@@ -45,7 +45,7 @@
 	&__text {
 		max-height: 9.0625vw;
 		overflow: hidden;
-		font-size: 0.73vw;
+		font-size: 1vw;
 		line-height: 207%;
 		transition: max-height 0.5s ease-in-out;
 	}
@@ -92,7 +92,7 @@
 
 		&__text {
 			max-height: 19.2rem;
-			font-size: 0.8rem;
+			font-size: 1.1rem;
 			line-height: 200%;
 			text-align: center;
 		}

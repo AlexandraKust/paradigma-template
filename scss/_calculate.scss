@@ -155,13 +155,13 @@
 		position: absolute;
 		top: -0.3vw;
 		left: auto;
-		right: -5.21vw;
-		width: 10.42vw;
+		right: -7.5vw;
+		width: 15vw;
 		transform: translateY(-100%);
 	}
 
 	&__checkbox .calculate__hint {
-		top: 0.45vw;
+		top: 0.3vw;
 	}
 
 	&__check {
@@ -216,7 +216,7 @@
 				}
 
 				.calculate__hint {
-					top: 0.6rem;
+					top: 0.4rem;
 				}
 			}
 
@@ -273,14 +273,14 @@
 
 		&__checkbox .hint__text {
 			position: absolute;
-			top: -0.3rem;
+			top: -0.7rem;
 			left: auto;
 			right: -3rem;
-			width: 15rem;
+			width: 18rem;
 		}
 
 		&__checkbox .calculate__hint {
-			top: 0.5rem;
+			top: 0.1rem;
 		}
 
 		&__check {
@@ -293,13 +293,13 @@
 			line-height: 2.5rem;
 
 			span {
-				font-size: 4rem;
-				line-height: 5rem;
+				font-size: 3rem;
+				line-height: 3rem;
 			}
 
 			.item-price__discount {
 				position: relative;
-				top: 0.6rem;
+				top: 0.3rem;
 				padding: 0.5rem 0.9rem;
 				border-radius: 50rem;
 				font-size: 1.2rem;

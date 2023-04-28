@@ -2,6 +2,15 @@
 	&__item {
 		position: relative;
 		margin-bottom: 1.3vw;
+		overflow: hidden;
+
+		&:hover {
+			cursor: pointer;
+
+			.card__mask {
+				opacity: 1;
+			}
+		}
 
 		.template-item__img {
 			height: 36.46vw;
@@ -102,6 +111,39 @@
 		color: #fff;
 	}
 
+	&__mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba($color: #000, $alpha: 0.6);
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+
+		.card__btn {
+			background-color: $accent-color;
+			color: #fff;
+
+			path {
+				fill: currentColor;
+			}
+
+			&:hover {
+				background: darken($color: $accent-color, $amount: 7%);
+			}
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
+
 	&__data {
 		padding: 1.45vw 2.16vw;
 		margin-bottom: 2.86vw;
@@ -137,6 +179,7 @@
 		}
 
 		.hint__text {
+			font-weight: 400;
 			top: -0.3vw;
 			left: auto;
 			right: -5.21vw;
@@ -430,15 +473,15 @@
 			padding: 0.8rem 0.9rem 0.7rem;
 			margin-bottom: 1.1rem;
 			border-radius: 1rem;
-			column-gap: 1.6rem;
+			column-gap: 2.6rem;
 			row-gap: 0.4rem;
 			justify-content: start;
 		}
 
 		&__data-item {
 			gap: 0.3rem;
-			font-size: 0.7rem;
-			line-height: 0.9rem;
+			font-size: 1rem;
+			line-height: 125%;
 		}
 
 		&__data-value {
@@ -451,8 +494,12 @@
 
 		&__data-hint .hint__text {
 			top: -0.3rem;
-			right: -7.6rem;
-			width: 15.2rem;
+			right: -9rem;
+			width: 18rem;
+		}
+
+		&__mask .card__btn {
+			width: 90%;
 		}
 
 		&__wrap-btn span {
