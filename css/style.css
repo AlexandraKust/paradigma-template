@@ -1920,6 +1920,7 @@ body.lock {
     margin-bottom: 2rem;
   }
   .hero--search {
+    width: 100%;
     padding-top: 2.6rem;
   }
   .hero--search .hero__title {
